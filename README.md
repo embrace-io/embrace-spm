@@ -1,1 +1,1 @@
-# embrace-spm
+Embrace SPM repo
