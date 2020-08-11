@@ -1,1 +1,1 @@
-Embrace SPM repo
+Embrace SPM repo.  Documentation: https://embrace.io/docs/ios/integration/
