@@ -91,6 +91,17 @@
  */
 @property(atomic, strong, readonly, nullable) NSString *imagesBaseURL;
 
+/**
+ URLSessionDelegate proxying filters, if a string from this filter is found, Embrace will not proxy that URLSession's delegate
+ Tasks associated with the session are still proxied.
+
+ @note Plist detail
+ - Key: URLSESSION_CAPTURE_FILTERS
+ - Type: Array<String>
+ - Defult: nil
+ */
+@property (atomic, strong, readonly, nullable) NSArray<NSString *> *urlSessionCaptureFilters;
+
 // MARK: Represents the crash handler element specified in the Embrace config file.
 
 /**
