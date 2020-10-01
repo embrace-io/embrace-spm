@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/EMBCustomFlow.h</key>
 		<data>
-		CdbkwTUo+OXCpBNAtRUDdiQ33YE=
+		8GcAdfFp9CACDSSwj/AmAIKpMfk=
 		</data>
 		<key>Headers/EMBNetworkRequest.h</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Headers/EMBPurchaseFlow.h</key>
 		<data>
-		eu+VJ1onSz/+katxeH2lk/4KbH8=
+		fln7youNJt3wYDCCvtvLTDqACLM=
 		</data>
 		<key>Headers/EMBRegistrationFlow.h</key>
 		<data>
-		l7cFo3KaoAXQ8Jmw145dQ+3JYMA=
+		nfjA+gv524HXO4LhcFOlikn0ELk=
 		</data>
 		<key>Headers/EMBSubscriptionPurchaseFlow.h</key>
 		<data>
-		5A6JxQ10xKtsFdWRRjRX2H9PCXs=
+		BGWsbwVQXZ18wl0WqrldodVEBFw=
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		4IYSr2YFWnoF+s2UieVzR6cUe80=
+		KW2mD26FPsImrXRKLHnc0LrH/HM=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xfg9ISo9db+Pmyair6fWYbe5Zw0=
+		qk/5h9Q1HfgOdMTL1XGVI6UlV7E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,11 +66,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CdbkwTUo+OXCpBNAtRUDdiQ33YE=
+			8GcAdfFp9CACDSSwj/AmAIKpMfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			8mnMGfyO/3CD2TxCFEf70DFjjarTQ1txkNHo4y0Yqh8=
+			TRu6wLLAaiyigZl9/uvNLEFva/Xqo/adM/T/PEloE5M=
 			</data>
 		</dict>
 		<key>Headers/EMBNetworkRequest.h</key>
@@ -88,44 +88,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eu+VJ1onSz/+katxeH2lk/4KbH8=
+			fln7youNJt3wYDCCvtvLTDqACLM=
 			</data>
 			<key>hash2</key>
 			<data>
-			0jkmy2TtId15EIMj3XCC8RXtadxJWBG6bx2Kic+W44Q=
+			JtRC2sYEeN8HflAp8+Z0X5IV/sG6VaNujc2rLQZouYU=
 			</data>
 		</dict>
 		<key>Headers/EMBRegistrationFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			l7cFo3KaoAXQ8Jmw145dQ+3JYMA=
+			nfjA+gv524HXO4LhcFOlikn0ELk=
 			</data>
 			<key>hash2</key>
 			<data>
-			4O5zqXf0x2flSANvYt4go4iUQMLKUYQHj0gHOdf2jnQ=
+			4dwT9cDvKE4fGfya3+tGFVxck284aLS23K90bscCuq8=
 			</data>
 		</dict>
 		<key>Headers/EMBSubscriptionPurchaseFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			5A6JxQ10xKtsFdWRRjRX2H9PCXs=
+			BGWsbwVQXZ18wl0WqrldodVEBFw=
 			</data>
 			<key>hash2</key>
 			<data>
-			hpQ8XRRLPEca3foZ2auyZiMBR20X6H3iHVmzE3FMsgc=
+			l3IcmIw0f5I6hWKozEYTqOYWAf5hnlC7Om3fqIsE9Ts=
 			</data>
 		</dict>
 		<key>Headers/Embrace.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4IYSr2YFWnoF+s2UieVzR6cUe80=
+			KW2mD26FPsImrXRKLHnc0LrH/HM=
 			</data>
 			<key>hash2</key>
 			<data>
-			hfH/iuOVa7FbGmFPEQySORtKssM/niCohs4JjYqJMSg=
+			ysZ4vh7G1toh0eqqpaUTYovPeuycxXQI/zsnRETi2IY=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>

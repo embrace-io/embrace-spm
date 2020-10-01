@@ -6,8 +6,8 @@
 //  Copyright © 2018 embrace.io. All rights reserved.
 //
 
-#import "EMBCustomFlow.h"
-#import "EMBConstants.h"
+#import <Embrace/EMBCustomFlow.h>
+#import <Embrace/EMBConstants.h>
 
 /**
  This class is responsible for tracking app performance during registration flows.

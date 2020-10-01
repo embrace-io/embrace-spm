@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EMBConstants.h"
+#import <Embrace/EMBConstants.h>
 
 /**
  Base class for creating custom domain-specific flows that are essentially convenience wrappers around existing SDK

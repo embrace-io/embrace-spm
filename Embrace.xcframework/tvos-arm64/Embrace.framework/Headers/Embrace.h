@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EmbraceConfig.h"
-#import "EMBConstants.h"
-#import "EMBCustomFlow.h"
-#import "EMBNetworkRequest.h"
-#import "EMBPurchaseFlow.h"
-#import "EMBRegistrationFlow.h"
-#import "EMBSubscriptionPurchaseFlow.h"
-#import "RNEmbrace.h"
+#import <Embrace/EmbraceConfig.h>
+#import <Embrace/EMBConstants.h>
+#import <Embrace/EMBCustomFlow.h>
+#import <Embrace/EMBNetworkRequest.h>
+#import <Embrace/EMBPurchaseFlow.h>
+#import <Embrace/EMBRegistrationFlow.h>
+#import <Embrace/EMBSubscriptionPurchaseFlow.h>
+#import <Embrace/RNEmbrace.h>
 
 /**
  Project version number for the Embrace framework.
