@@ -72,6 +72,16 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
 - (void)startWithLaunchOptions:(nullable NSDictionary *)launchOptions;
 
 /**
+ Performs the initial setup of the Embrace SDK with the default config file if present
+ 
+ @param launchOptions The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
+ 
+ @param framework The framework used by the app, e.g. EMBAppFrameworkReactNative.
+ */
+- (void)startWithLaunchOptions:(nullable NSDictionary *)launchOptions
+                     framework:(EMBAppFramework)framework;
+
+/**
  Performs the initial setup of the Embrace SDK with a custom EmbraceConfig.
  
  @param config The Embrace application object used to configure the service.

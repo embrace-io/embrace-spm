@@ -85,6 +85,11 @@ typedef NS_ENUM(NSInteger, EMBAppFramework) {
      ReactNative framework.
      */
     EMBAppFrameworkReactNative,
+
+    /**
+     Unity framework.
+     */
+    EMBAppFrameworkUnity,
 };
 
 /**
