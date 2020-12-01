@@ -235,6 +235,16 @@
 // MARK: Represents the webView configuration element specified in the Embrace config file.
 
 /**
+ Specify a webview URL maximum length .
+ 
+ @note Plist detail
+    - Key: WEBVIEW_URL_LENGTH
+    - Type: Number
+    - Defult: 1024
+ */
+@property(atomic, assign, readonly) NSUInteger webviewURLLength;
+
+/**
  Control whether webview query parameters are captured.
  
  @note Plist detail
