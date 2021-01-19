@@ -620,4 +620,14 @@ Enables or disables embrace's internal trace logging.
  */
 - (void)setCleanLogsEnabled:(BOOL)enabled;
 
+/**
+ Suspend coordinate capture
+ */
+- (void)pauseTapCoordinateCapture;
+
+/**
+ Resume coordinate capture
+ */
+- (void)resumeTapCoordinateCapture;
+
 @end
