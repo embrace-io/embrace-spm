@@ -630,4 +630,9 @@ Enables or disables embrace's internal trace logging.
  */
 - (void)resumeTapCoordinateCapture;
 
+/**
+ Enables or disables background sessions
+ */
+- (void)setBackgroundSessionsEnabled:(BOOL)enabled;
+
 @end
