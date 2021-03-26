@@ -635,4 +635,9 @@ Enables or disables embrace's internal trace logging.
  */
 - (void)setBackgroundSessionsEnabled:(BOOL)enabled;
 
+/**
+ Enables or disables airplane mode
+ */
+- (void)setAirplaneModeEnabled:(BOOL)enabled;
+
 @end
