@@ -101,3 +101,24 @@ typedef NSDictionary<NSString *, NSString *> EMBProperties;
  Embrace bundle identifier.
  */
 extern NSString *const EMBBundleIdentifier;
+
+/**
+ Embrace background session modes.
+ */
+typedef NS_ENUM(NSInteger, EMBBackgroundSessionMode) {
+    
+    /**
+     Background session disabled.
+     */
+    EMBBackgroundSessionDisabled = 0,
+    
+    /**
+     Background session hybrid.
+     */
+    EMBBackgroundSessionHybrid,
+    
+    /**
+     Background session full.
+     */
+    EMBBackgroundSessionFull
+};

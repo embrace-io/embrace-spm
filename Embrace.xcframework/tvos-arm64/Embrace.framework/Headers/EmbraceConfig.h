@@ -179,6 +179,16 @@
 @property(atomic, strong, readonly, nullable) NSArray *disabledUrlPatterns;
 
 /**
+ URLs that should not be captured.
+ 
+ @note Plist detail
+    - Key: IGNORE_CANCELLED_REQUESTS
+    - Type: Array
+    - Defult: nil
+ */
+@property(atomic, strong, readonly, nullable) NSArray *ignoreCancelledRequests;
+
+/**
  Control whether network request metrics is captured.
  
  @note Plist detail
