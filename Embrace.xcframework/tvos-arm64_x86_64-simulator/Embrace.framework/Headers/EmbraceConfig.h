@@ -309,16 +309,4 @@
  */
 @property(atomic, assign, readonly) BOOL automaticViewCaptureEnabled;
 
-/**
-  Embrace can use the os_log stream to help categorize crash reports or find non-fatal exceptions such as CollectionView or Autolayout runtime issues.
-
-  By default this feature is off as the os_log stream can contain sensitive information.  Enable this feature if you comfortable with sharing your os_log data with Embrace.
- 
- @note Plist detail
-    - Key: ENABLE_OS_LOG
-    - Type: Boolean
-    - Defult: true
- */
-@property(atomic, assign, readonly) BOOL oslogTrackingEnabled;
-
 @end
