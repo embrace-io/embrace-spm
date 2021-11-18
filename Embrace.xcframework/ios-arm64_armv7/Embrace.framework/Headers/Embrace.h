@@ -616,6 +616,11 @@ Enables or disables embrace's internal trace logging.
 - (void)setTraceEnabled:(BOOL)enabled;
 
 /**
+Checks if the Embrace NSException handler is being used;
+*/
+- (BOOL)isUsingEmbraceNSExceptionHandler;
+
+/**
  Enables or disables embrace's clean logging format
  */
 - (void)setCleanLogsEnabled:(BOOL)enabled;

@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		w1ec7IVJmF7FohqtXcK6csWevwA=
+		UH3ruD73LYqSpsyOgcrO6aCmMHs=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
-		MFF+095kCwQEepIo/Y30z84lJsI=
+		nnwt8L1JDfGIdNg2UEKBjZZpKTM=
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		qoKuDRxiT7YIedpDiOlzPOhmLeQ=
+		XF26r/+oN5T+btsg1okEpjDebGk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,22 +121,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w1ec7IVJmF7FohqtXcK6csWevwA=
+			UH3ruD73LYqSpsyOgcrO6aCmMHs=
 			</data>
 			<key>hash2</key>
 			<data>
-			RQUfhRPDCUC22nJiZiOfbaO2MMYh7pgKpKn1ZvREMew=
+			4BezhEbjUmzmBvYGtGsQq/bPsLSox5aPyuDJkEfS+mo=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MFF+095kCwQEepIo/Y30z84lJsI=
+			nnwt8L1JDfGIdNg2UEKBjZZpKTM=
 			</data>
 			<key>hash2</key>
 			<data>
-			P7zH7TE3YxXTyv5SxwTGU+L3PwN6zQ4e0arO/WrO52k=
+			lHLBl8KEjq7vv3uMEwhf1okqwWImkmwH4K5aN7cF7QI=
 			</data>
 		</dict>
 		<key>Headers/RNEmbrace.h</key>
