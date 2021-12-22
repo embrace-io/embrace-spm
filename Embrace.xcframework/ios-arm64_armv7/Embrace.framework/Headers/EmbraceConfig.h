@@ -179,6 +179,21 @@
 @property(atomic, strong, readonly, nullable) NSArray *disabledUrlPatterns;
 
 /**
+ This is a dictionary that contains two keys and is used like x-emb-path except that it's value is auto generated from a value of an http header.
+ The auto generated value is <Domain>/<custom_path>/<header_value>
+    - HEADER : The name of the http header thats value is used to replace <header_value> above
+    - RELATVIE_URL_PATH : A string that is used to fill in <custom_path> above
+ 
+ @note this will only work if x-emb-path is not present in the header. So x-emb-path is prioritized
+ @note Plist detail
+    - Key: CUSTOM_PATH_HEADER_INFO
+    - Type: Dictionary
+    - Default: nil
+ */
+
+@property(atomic, strong, readonly, nullable) NSDictionary* customRelativeHeaderInfo;
+
+/**
  URLs that should not be captured.
  
  @note Plist detail
@@ -308,17 +323,5 @@
     - Defult: true
  */
 @property(atomic, assign, readonly) BOOL automaticViewCaptureEnabled;
-
-/**
-  Embrace can use the os_log stream to help categorize crash reports or find non-fatal exceptions such as CollectionView or Autolayout runtime issues.
-
-  By default this feature is off as the os_log stream can contain sensitive information.  Enable this feature if you comfortable with sharing your os_log data with Embrace.
- 
- @note Plist detail
-    - Key: ENABLE_OS_LOG
-    - Type: Boolean
-    - Defult: true
- */
-@property(atomic, assign, readonly) BOOL oslogTrackingEnabled;
 
 @end
