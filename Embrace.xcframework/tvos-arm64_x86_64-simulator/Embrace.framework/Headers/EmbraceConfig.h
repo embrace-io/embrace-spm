@@ -179,12 +179,19 @@
 @property(atomic, strong, readonly, nullable) NSArray *disabledUrlPatterns;
 
 /**
- The header value to automatically use in place of x-emb-path
+ This is a dictionary that contains two keys and is used like x-emb-path except that it's value is auto generated from a value of an http header.
+ The auto generated value is <Domain>/<custom_path>/<header_value>
+    - HEADER : The name of the http header thats value is used to replace <header_value> above
+    - RELATVIE_URL_PATH : A string that is used to fill in <custom_path> above
  
  @note this will only work if x-emb-path is not present in the header. So x-emb-path is prioritized
+ @note Plist detail
+    - Key: CUSTOM_PATH_HEADER_INFO
+    - Type: Dictionary
+    - Default: nil
  */
 
-@property(atomic, strong, readonly, nullable) NSString* customRelativeHeaderValue;
+@property(atomic, strong, readonly, nullable) NSDictionary* customRelativeHeaderInfo;
 
 /**
  URLs that should not be captured.
