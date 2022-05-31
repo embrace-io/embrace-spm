@@ -54,6 +54,12 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  */
 @property (nonatomic, weak, nullable) id<EmbraceDelegate> delegate;
 
+/*
+ Returns YES if the any "start" function variants have been called.
+ */
+
+@property (nonatomic) BOOL isStarted;
+
 /**
  Returns the shared `Embrace` singleton object.
  */
