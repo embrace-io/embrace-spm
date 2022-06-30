@@ -315,6 +315,16 @@
 @property(atomic, assign, readonly) BOOL captureCoordinatesEnabled;
 
 /**
+ Control whether tapped element names are captured.
+
+ @note Plist detail
+    - Key: CAPTURE_TAPPED_ELEMENTS
+    - Type: Boolean
+    - Defult: true
+ */
+@property(atomic, assign, readonly) BOOL captureTappedElementsEnabled;
+
+/**
  Control whether automatic view capture is enabled, disable this if you are using custom view API.
  
  @note Plist detail

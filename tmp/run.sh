@@ -59,8 +59,6 @@ DEFAULT_FRAMEWORK_SEARCH_DEPTH=2
 UPLOAD_BIN=upload
 UPLOAD_RELATIVE_PATH=EmbraceIO/${UPLOAD_BIN}
 
-[ -n "$CONFIGURATION_BUILD_DIR" ] && [ -n "$UNLOCALIZED_RESOURCES_FOLDER_PATH" ] && REACT_NATIVE_BUNDLE_PATH_DEFAULT="$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/main.jsbundle"
-
 function log () {
     # xcode will mark log lines as warnings and errors if prefixed with the values below. the prefixes are removed and error and warning markers replace them.
     case $2 in
@@ -75,7 +73,7 @@ function log () {
         ;;
     esac
 
-    echo "${prefix}[Embrace dSYM Upload] $(date +"%Y/%m/%d %H:%M:%S") $1"
+    echo "$(date +"%Y/%m/%d %H:%M:%S") [Embrace dSYM Upload] ${prefix} $1"
 }
 
 
@@ -98,7 +96,34 @@ function run() {
     fi
 }
 
+function createSourceMap() {
+  REACT_NATIVE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
+  CLI_PATH="$REACT_NATIVE_DIR/node_modules/react-native/cli.js"
+
+  DEST=$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH
+
+  node "$CLI_PATH" bundle \
+    --entry-file index.js \
+    --platform ios \
+    --dev false \
+    --bundle-output "$react_bundle_path" \
+    --assets-dest "$DEST" \
+    --sourcemap-output  "$react_map_path"
+}
+
 function react_native_upload() {
+
+    if [ "$CONFIGURATION" = "Debug" ] || [ "$REACT_NATIVE" = "0" ] ; then
+      if [ "$CONFIGURATION" = "Debug" ] ; then
+          log "Debug build detected. Will not upload React Native bundle."
+      elif [ "$REACT_NATIVE" = "0" ] ; then
+          log "REACT_NATIVE=0. Will not upload React Native bundle."
+      fi
+      return
+    fi
+
+    [ -n "$CONFIGURATION_BUILD_DIR" ] && [ -n "$UNLOCALIZED_RESOURCES_FOLDER_PATH" ] && REACT_NATIVE_BUNDLE_PATH_DEFAULT="$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/main.jsbundle"
+
     react_bundle_path=
     # If no bundle path is provided then we check for the existence of the bundle in the default path.
     # If we find the default bundle file we assume it is a React Native app. If a bundle path is specified
@@ -113,41 +138,40 @@ function react_native_upload() {
       if [ -n "$REACT_NATIVE_BUNDLE_PATH" ] ; then
         log_warning "Could not find JavaScript bundle ${react_bundle_path}. Exiting early."
       fi
-
+      log "Could not find JavaScript bundle ${react_bundle_path} when using default location derived from CONFIGURATION_BUILD_DIR and UNLOCALIZED_RESOURCES_FOLDER_PATH. Exiting early."
       return
     fi
 
     react_map_path="${REACT_NATIVE_MAP_PATH}"
     if [ -z "$REACT_NATIVE_MAP_PATH" ] ; then
-        react_map_path="${react_bundle_path}.map"
+      log "Setting react_map_path: using react bundle path \"${react_bundle_path}\" since REACT_NATIVE_MAP_PATH was not specified"
+      react_map_path="${react_bundle_path}.map"
+    else
+      log "Setting react_map_path: using react bundle path to \"${react_map_path}\" from REACT_NATIVE_MAP_PATH"
     fi
 
     if [ ! -f "$react_map_path" ] ; then
       if [ -n "$REACT_NATIVE_MAP_PATH" ] ; then
         log_warning "Could not find JavaScript map at ${react_map_path}. Exiting early."
       fi
+      log "Could not find JavaScript map \"$react_map_path\" when using default location derived from the bundle path \"$react_bundle_path\"." 
+      log "Try to create JavaScript map in \"$react_map_path\" manually."
+      
+      createSourceMap
 
-      return
+      if [ ! -f "$react_map_path" ] ; then
+        log_warning "Could not create javascript map. Exiting early"
+        return
+      fi
+      log "Sourcemap was created manually."
     fi
 
-    react_args="--rn-bundle ${react_bundle_path}  --rn-map ${react_map_path}"
-    # If this is a debug build or if they explicitly say this is not a RN app then do not set bundle path.
-    # This means that we will not upload the JS bundle
-    if [ -n "$react_args" ] ; then
-        if [ "$CONFIGURATION" = "Debug" ] || [ "$REACT_NATIVE" = "0" ] ; then
-            react_args=
-        fi
-        if [ "$CONFIGURATION" = "Debug" ] ; then
-            log "Debug build detected. Will not upload React Native bundle."
-        elif [ "$REACT_NATIVE" = "0" ] ; then
-            log "REACT_NATIVE=0. Will not upload React Native bundle."
-        fi
-    fi
+    react_args="--rn-bundle \"$react_bundle_path\"  --rn-map \"$react_map_path\""
 
     if [ -n "$react_args" ] ; then
         log "uploading react native resources with bundle at ${react_bundle_path} and map at ${react_map_path}"
         # shellcheck disable=2153
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $react_args"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $react_args --log-level $EMBRACE_LOG_LEVEL"
     fi
 }
 
@@ -196,7 +220,7 @@ function upload() {
         else
           icon_arg=""
         fi
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $icon_arg --dsym \"$app_dsym_file\""
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $icon_arg --dsym \"$app_dsym_file\" --log-level $EMBRACE_LOG_LEVEL"
     else
         log_warning "No app dSYM file was found under BUILD_ROOT ${BUILD_ROOT}. Skipping upload."
     fi
@@ -244,7 +268,7 @@ function upload() {
             log "Queueing framework dSYM for upload: $dsym_full_path"
         done
         IFS=$ORIG_IFS
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $dsym_args"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $dsym_args --log-level $EMBRACE_LOG_LEVEL"
     fi
 }
 
@@ -275,6 +299,14 @@ fi
 if [ -z "$EMBRACE_TOKEN" ] ; then
   log_error "Missing EMBRACE_TOKEN environment variable. Skipping upload."
   exit 1
+fi
+
+#
+# check if EMBRACE_LOG_LEVEL has value, if not set the default one.
+#
+if [ -z "$EMBRACE_LOG_LEVEL" ] ; then
+  export EMBRACE_LOG_LEVEL=info
+  log "Set EMBRACE_LOG_LEVEL=info to display info logs."
 fi
 
 #
