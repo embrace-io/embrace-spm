@@ -54,6 +54,12 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  */
 @property (nonatomic, weak, nullable) id<EmbraceDelegate> delegate;
 
+/*
+ Returns YES if the any "start" function variants have been called.
+ */
+
+@property (nonatomic) BOOL isStarted;
+
 /**
  Returns the shared `Embrace` singleton object.
  */
@@ -680,6 +686,16 @@ Enables or disables embrace's internal trace logging.
  Resume coordinate capture
  */
 - (void)resumeTapCoordinateCapture;
+
+/**
+ Suspend tap element capture
+ */
+- (void)pauseTapElementCapture;
+
+/**
+ Resume tap element capture
+ */
+- (void)resumeTapElementCapture;
 
 /**
  Enables or disables background sessions
