@@ -90,6 +90,11 @@ typedef NS_ENUM(NSInteger, EMBAppFramework) {
      Unity framework.
      */
     EMBAppFrameworkUnity,
+
+    /**
+     Flutter framework.
+     */
+    EMBAppFrameworkFlutter,
 };
 
 /**

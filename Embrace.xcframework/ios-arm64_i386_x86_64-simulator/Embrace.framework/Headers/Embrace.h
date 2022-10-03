@@ -15,6 +15,7 @@
 #import <Embrace/EMBRegistrationFlow.h>
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
+#import <Embrace/EMBFlutterEmbrace.h>
 
 /**
  Project version number for the Embrace framework.
@@ -53,6 +54,12 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  Optional delegate property that can be set to receive callbacks about the Embrace.io SDK's operations
  */
 @property (nonatomic, weak, nullable) id<EmbraceDelegate> delegate;
+
+/*
+ Returns YES if the any "start" function variants have been called.
+ */
+
+@property (nonatomic) BOOL isStarted;
 
 /**
  Returns the shared `Embrace` singleton object.
@@ -680,6 +687,16 @@ Enables or disables embrace's internal trace logging.
  Resume coordinate capture
  */
 - (void)resumeTapCoordinateCapture;
+
+/**
+ Suspend tap element capture
+ */
+- (void)pauseTapElementCapture;
+
+/**
+ Resume tap element capture
+ */
+- (void)resumeTapElementCapture;
 
 /**
  Enables or disables background sessions
