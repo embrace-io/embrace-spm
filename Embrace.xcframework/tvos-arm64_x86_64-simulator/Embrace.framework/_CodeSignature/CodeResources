@@ -6,11 +6,15 @@
 	<dict>
 		<key>Headers/EMBConstants.h</key>
 		<data>
-		sMVidxjRtLoRDfa0/QXoUimaDTk=
+		72JWdBHbwi3NyuOgGbQQRbdGlBM=
 		</data>
 		<key>Headers/EMBCustomFlow.h</key>
 		<data>
 		8GcAdfFp9CACDSSwj/AmAIKpMfk=
+		</data>
+		<key>Headers/EMBFlutterEmbrace.h</key>
+		<data>
+		uKGrz/PXvs81zBwjD8nn2t44t2w=
 		</data>
 		<key>Headers/EMBNetworkRequest.h</key>
 		<data>
@@ -30,11 +34,11 @@
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		2ueGovRHPBsNP6OkKY0N9tbX/cY=
+		iRM9PdDJUSJ8ukAZKlX1anfy4dA=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
-		3cbeKFGkP58uxKZJ+aDirktzSg4=
+		diCGunvhOssvEczgG8ppQIMhaeg=
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
@@ -42,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lDMGkmBh19pgA5hscNr3Af0FPBQ=
+		/Tb0OtGE8+tmwYMdjdCfbNX4NSs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,11 +59,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sMVidxjRtLoRDfa0/QXoUimaDTk=
+			72JWdBHbwi3NyuOgGbQQRbdGlBM=
 			</data>
 			<key>hash2</key>
 			<data>
-			yQjnkG36yI4aoayHK0Her26HQETFaNFblueXdRDZp5c=
+			+ISmutOU2g5PHCd6HF/3L50QXo7fQBzouM9n+znLgmA=
 			</data>
 		</dict>
 		<key>Headers/EMBCustomFlow.h</key>
@@ -71,6 +75,17 @@
 			<key>hash2</key>
 			<data>
 			TRu6wLLAaiyigZl9/uvNLEFva/Xqo/adM/T/PEloE5M=
+			</data>
+		</dict>
+		<key>Headers/EMBFlutterEmbrace.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uKGrz/PXvs81zBwjD8nn2t44t2w=
+			</data>
+			<key>hash2</key>
+			<data>
+			bSlXme3mDldin1U6j2WOL/W0tZaVLd6lpK5wGuf55JI=
 			</data>
 		</dict>
 		<key>Headers/EMBNetworkRequest.h</key>
@@ -121,22 +136,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2ueGovRHPBsNP6OkKY0N9tbX/cY=
+			iRM9PdDJUSJ8ukAZKlX1anfy4dA=
 			</data>
 			<key>hash2</key>
 			<data>
-			7ddb0v0hWTB17exxP3S3wFGyCd9W1/L3SWjSoiSNxLU=
+			An3jNhQlfvSIsIw2XQaS7w3yEGmCz1STyeE7+h7evZw=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3cbeKFGkP58uxKZJ+aDirktzSg4=
+			diCGunvhOssvEczgG8ppQIMhaeg=
 			</data>
 			<key>hash2</key>
 			<data>
-			NeftJe4kpgH1KNfrp3uic6ufVUIltCsx1eWxGrhJGng=
+			ULcdiofYzQPEalaJs8HiApLldGAfdbrmKsoxpCJ+8to=
 			</data>
 		</dict>
 		<key>Headers/RNEmbrace.h</key>
