@@ -45,7 +45,7 @@
  @note Plist detail
     - Key: API_KEY
     - Type: String
-    - Defult: N/A
+    - Default: N/A
  */
 @property(atomic, strong, readonly, nonnull) NSString *APIKey;
 
@@ -57,7 +57,7 @@
  @note Plist detail
     - Key: DATA_BASE_URL
     - Type: String
-    - Defult: data.emb-api.com
+    - Default: data.emb-api.com
  */
 @property(atomic, strong, readonly, nullable) NSString *baseURL;
 
@@ -67,7 +67,7 @@
  @note Plist detail
     - Key: DATA_DEV_BASE_URL
     - Type: String
-    - Defult: data-dev.emb-api.com
+    - Default: data-dev.emb-api.com
  */
 @property(atomic, strong, readonly, nullable) NSString *devBaseURL;
 
@@ -77,7 +77,7 @@
  @note Plist detail
     - Key: CONFIG_BASE_URL
     - Type: String
-    - Defult: config.emb-api.com
+    - Default: config.emb-api.com
  */
 @property(atomic, strong, readonly, nullable) NSString *configBaseURL;
 
@@ -87,7 +87,7 @@
  @note Plist detail
     - Key: IMAGES_BASE_URL
     - Type: String
-    - Defult: images.emb-api.com
+    - Default: images.emb-api.com
  */
 @property(atomic, strong, readonly, nullable) NSString *imagesBaseURL;
 
@@ -98,7 +98,7 @@
  @note Plist detail
  - Key: URLSESSION_CAPTURE_FILTERS
  - Type: Array<String>
- - Defult: nil
+ - Default: nil
  */
 @property (atomic, strong, readonly, nullable) NSArray<NSString *> *urlSessionCaptureFilters;
 
@@ -110,7 +110,7 @@
  @note Plist detail
     - Key: CRASH_REPORT_ENABLED
     - Type: Boolean
-    - Defult: false
+    - Default: false
  */
 @property (atomic, strong, readonly, nullable) NSNumber *crashReportEnabled;
 
@@ -122,7 +122,7 @@
  @note Plist detail
     - Key: STARTUP_AUTOEND_SECONDS
     - Type: Number
-    - Defult: nil
+    - Default: nil
  */
 @property (atomic, strong, readonly, nullable) NSNumber *startupAutoendSeconds;
 
@@ -132,7 +132,7 @@
  @note Plist detail
     - Key: STARTUP_MOMENT_SCREENSHOT_ENABLED
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL startupScreenshotEnabled;
 
@@ -144,7 +144,7 @@
  @note Plist detail
     - Key: TRACE_ID_HEADER_NAME
     - Type: String
-    - Defult: x-emb-trace-id
+    - Default: x-emb-trace-id
  */
 @property(atomic, strong, readonly, nullable) NSString *traceIdHeader;
 
@@ -154,7 +154,7 @@
  @note Plist detail
     - Key: DEFAULT_CAPTURE_LIMIT
     - Type: Number
-    - Defult: nil
+    - Default: nil
  */
 @property (atomic, strong, readonly, nullable) NSNumber *networkCaptureLimit;
 
@@ -164,7 +164,7 @@
  @note Plist detail
     - Key: DOMAINS
     - Type: Dictionary
-    - Defult: nil
+    - Default: nil
  */
 @property (atomic, strong, readonly, nullable) NSDictionary<NSString *, NSNumber *> *networkCaptureDomains;
 
@@ -174,9 +174,24 @@
  @note Plist detail
     - Key: DISABLED_URL_PATTERNS
     - Type: Array
-    - Defult: nil
+    - Default: nil
  */
 @property(atomic, strong, readonly, nullable) NSArray *disabledUrlPatterns;
+
+/**
+ This is a dictionary that contains two keys and is used like x-emb-path except that it's value is auto generated from a value of an http header.
+ The auto generated value is <Domain>/<custom_path>/<header_value>
+    - HEADER : The name of the http header thats value is used to replace <header_value> above
+    - RELATIVE_URL_PATH : A string that is used to fill in <custom_path> above
+ 
+ @note this will only work if x-emb-path is not present in the header. So x-emb-path is prioritized
+ @note Plist detail
+    - Key: CUSTOM_PATH_HEADER_INFO
+    - Type: Dictionary
+    - Default: nil
+ */
+
+@property(atomic, strong, readonly, nullable) NSDictionary* customRelativeHeaderInfo;
 
 /**
  URLs that should not be captured.
@@ -184,7 +199,7 @@
  @note Plist detail
     - Key: IGNORE_CANCELLED_REQUESTS
     - Type: Array
-    - Defult: nil
+    - Default: nil
  */
 @property(atomic, strong, readonly, nullable) NSArray *ignoreCancelledRequests;
 
@@ -194,7 +209,7 @@
  @note Plist detail
     - Key: COLLECT_NETWORK_REQUEST_METRICS
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL collectNetworkRequestMetrics;
 
@@ -204,7 +219,7 @@
  @note Plist detail
     - Key: NSURLCONNECTION_PROXY_ENABLE
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL nsurlconnectionProxyEnable;
 
@@ -214,19 +229,19 @@
  @note Plist detail
     - Key: BACKGROUND_FETCH_CAPTURE_ENABLE
     - Type: Boolean
-    - Defult: false
+    - Default: false
  */
 @property(atomic, assign, readonly) BOOL backgroundFetchCaptureEnable;
 
 /**
- Public RSA key to encrypt and store the network capture payload as a base64 string.
+ Public RSA key to encrypt and store the network capture payload as a base64 ng.
 
  Inlcude your public RSA key here, network body capture will be fully encrypted and only you can decrypt it using your private key.
  
  @note Plist detail
     - Key: CAPTURE_PUBLIC_KEY
     - Type: String
-    - Defult: nil
+    - Default: nil
  */
 @property(atomic, strong, readonly, nullable) NSString *networkCapturePublicKey;
 
@@ -238,7 +253,7 @@
  @note Plist detail
     - Key: MAX_SESSION_SECONDS
     - Type: Number
-    - Defult: nil
+    - Default: nil
  */
 @property(atomic, strong, readonly, nullable) NSNumber *maxSessionSeconds;
 
@@ -250,7 +265,7 @@
  @note Plist detail
     - Key: WEBVIEW_URL_LENGTH
     - Type: Number
-    - Defult: 1024
+    - Default: 1024
  */
 @property(atomic, assign, readonly) NSUInteger webviewURLLength;
 
@@ -260,7 +275,7 @@
  @note Plist detail
     - Key: WEBVIEW_STRIP_QUERYPARAMS
     - Type: Boolean
-    - Defult: false
+    - Default: false
  */
 @property(atomic, assign, readonly) BOOL webviewStripQueryparams;
 
@@ -270,7 +285,7 @@
  @note Plist detail
     - Key: WEBVIEW_ENABLE
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL webviewEnable;
 
@@ -283,7 +298,7 @@
  @note Plist detail
     - Key: ENABLE_WK_AUTO_RELOAD
     - Type: Boolean
-    - Defult: false
+    - Default: false
  */
 @property(atomic, assign, readonly) BOOL wttAutoReloadEnabled;
 
@@ -295,9 +310,19 @@
  @note Plist detail
     - Key: CAPTURE_COORDINATES
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL captureCoordinatesEnabled;
+
+/**
+ Control whether tapped element names are captured.
+
+ @note Plist detail
+    - Key: CAPTURE_TAPPED_ELEMENTS
+    - Type: Boolean
+    - Defult: true
+ */
+@property(atomic, assign, readonly) BOOL captureTappedElementsEnabled;
 
 /**
  Control whether automatic view capture is enabled, disable this if you are using custom view API.
@@ -305,20 +330,8 @@
  @note Plist detail
     - Key: ENABLE_AUTOMATIC_VIEW_CAPTURE
     - Type: Boolean
-    - Defult: true
+    - Default: true
  */
 @property(atomic, assign, readonly) BOOL automaticViewCaptureEnabled;
-
-/**
-  Embrace can use the os_log stream to help categorize crash reports or find non-fatal exceptions such as CollectionView or Autolayout runtime issues.
-
-  By default this feature is off as the os_log stream can contain sensitive information.  Enable this feature if you comfortable with sharing your os_log data with Embrace.
- 
- @note Plist detail
-    - Key: ENABLE_OS_LOG
-    - Type: Boolean
-    - Defult: true
- */
-@property(atomic, assign, readonly) BOOL oslogTrackingEnabled;
 
 @end

@@ -15,6 +15,7 @@
 #import <Embrace/EMBRegistrationFlow.h>
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
+#import <Embrace/EMBFlutterEmbrace.h>
 
 /**
  Project version number for the Embrace framework.
@@ -53,6 +54,12 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  Optional delegate property that can be set to receive callbacks about the Embrace.io SDK's operations
  */
 @property (nonatomic, weak, nullable) id<EmbraceDelegate> delegate;
+
+/*
+ Returns YES if the any "start" function variants have been called.
+ */
+
+@property (nonatomic) BOOL isStarted;
 
 /**
  Returns the shared `Embrace` singleton object.
@@ -488,6 +495,57 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
              properties:(nullable EMBProperties *)properties;
 
 /**
+ Logs a handled exception to the Embrace.io API for aggregation and viewing on the dashboard.
+ The log will include the stacktrace found on the exception.
+ 
+ @param exception The handled exception object, which will be serialized and combined with the stack trace to aggregate the errors on the dashboard view.
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ */
+- (void)logHandledException:(nonnull NSException *)exception
+               withSeverity:(EMBSeverity)severity;
+
+/**
+ Logs a handled exception to the Embrace.io API for aggregation and viewing on the dashboard.
+ The log will include the stacktrace found on the exception.
+ 
+ @param exception The handled exception object.
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param customStackTrace A custom Stack Trace to be logged and displayed on the dashboard view.
+ */
+- (void)logHandledException:(nonnull NSException *)exception
+               withSeverity:(EMBSeverity)severity
+           customStackTrace:(nonnull NSArray<NSString*> *)customStackTrace;
+
+//NSArray<NSString *>
+/**
+ Logs a handled exception to the Embrace.io API for aggregation and viewing on the dashboard.
+ The log will include the stacktrace found on the exception.
+ 
+ @param exception The handled exception object, which will be serialized and combined with the stack trace to aggregate the errors on the dashboard view.
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of custom key/value properties to be sent with the error log.
+ */
+- (void)logHandledException:(nonnull NSException *)exception
+               withSeverity:(EMBSeverity)severity
+                 properties:(nullable EMBProperties *)properties;
+
+/**
+ Logs a handled exception to the Embrace.io API for aggregation and viewing on the dashboard.
+ The log will include the stacktrace found on the exception.
+ 
+ @param exception The handled exception object, which will be serialized and combined with the stack trace to aggregate the errors on the dashboard view.
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of custom key/value properties to be sent with the error log.
+ @param customStackTrace A custom Stack Trace to be logged and displayed on the dashboard view. If this object is not nil, the Exception Stack Trace will be ignored.
+ @param takeScreenshot A flag for whether the SDK should take a screenshot of the application window to display on the dashboard
+ */
+- (void)logHandledException:(nonnull NSException *)exception
+               withSeverity:(EMBSeverity)severity
+                 properties:(nullable EMBProperties *)properties
+           customStackTrace:(nullable NSArray<NSString*> *)customStackTrace
+             takeScreenshot:(BOOL)takeScreenshot;
+
+/**
  Logs a custom message within this session for the Embrace dashboard to surface on the Session Timeline and within
  the Activity Log.
  
@@ -629,6 +687,16 @@ Enables or disables embrace's internal trace logging.
  Resume coordinate capture
  */
 - (void)resumeTapCoordinateCapture;
+
+/**
+ Suspend tap element capture
+ */
+- (void)pauseTapElementCapture;
+
+/**
+ Resume tap element capture
+ */
+- (void)resumeTapElementCapture;
 
 /**
  Enables or disables background sessions
