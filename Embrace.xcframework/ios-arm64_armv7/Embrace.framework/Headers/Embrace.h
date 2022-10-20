@@ -15,6 +15,7 @@
 #import <Embrace/EMBRegistrationFlow.h>
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
+#import <Embrace/EMBFlutterEmbrace.h>
 
 /**
  Project version number for the Embrace framework.
@@ -54,6 +55,12 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  */
 @property (nonatomic, weak, nullable) id<EmbraceDelegate> delegate;
 
+/*
+ Returns YES if the any "start" function variants have been called.
+ */
+
+@property (nonatomic) BOOL isStarted;
+
 /**
  Returns the shared `Embrace` singleton object.
  */
@@ -82,6 +89,19 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
                      framework:(EMBAppFramework)framework;
 
 /**
+ Performs the initial setup of the Embrace SDK with the default config file if present
+ 
+ @param launchOptions The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
+ 
+ @param framework The framework used by the app, e.g. EMBAppFrameworkReactNative.
+ 
+ @param enableIntegrationHelp If enabled (and only in development), the SDK will show an alert view when there's a critical error during the initialization process.
+ */
+- (void)startWithLaunchOptions:(nullable NSDictionary *)launchOptions
+                     framework:(EMBAppFramework)framework
+         enableIntegrationHelp:(BOOL)enableIntegrationHelp;
+
+/**
  Performs the initial setup of the Embrace SDK with a custom EmbraceConfig.
  
  @param config The Embrace application object used to configure the service.
@@ -97,6 +117,35 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
  */
 - (void)startWithConfig:(nonnull EmbraceConfig *)config
           launchOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions;
+
+/**
+ Performs the initial setup of the Embrace SDK with a custom EmbraceConfig.
+ 
+ @param config The Embrace application object used to configure the service.
+ 
+ @param launchOptions The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
+ 
+ @param framework The framework used by the app, e.g. EMBAppFrameworkReactNative.
+ */
+- (void)startWithConfig:(nonnull EmbraceConfig *)config
+          launchOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions
+              framework:(EMBAppFramework)framework;
+
+/**
+ Performs the initial setup of the Embrace SDK with a custom EmbraceConfig.
+ 
+ @param config The Embrace application object used to configure the service.
+ 
+ @param launchOptions The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
+ 
+ @param framework The framework used by the app, e.g. EMBAppFrameworkReactNative.
+ 
+ @param enableIntegrationHelp If enabled (and only in development), the SDK will show an alert view when there's a critical error during the initialization process.
+ */
+- (void)startWithConfig:(nonnull EmbraceConfig *)config
+          launchOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions
+              framework:(EMBAppFramework)framework
+  enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 
 /**
  Performs the initial setup of the Embrace SDK with the provided API key.
@@ -133,6 +182,24 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
 - (void)startWithKey:(nonnull NSString *)apiKey
        launchOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions
            framework:(EMBAppFramework)framework;
+
+/**
+ Performs the initial setup of the Embrace SDK with the provided API key.
+
+ This puts in place device and network monitoring, kicks off reporting, and marks the beginning of the "App Startup" event.
+
+ @param apiKey The unique Embrace API key that identifies your application.
+
+ @param launchOptions The launchOptions as passed to [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
+
+ @param framework The framework used by the app, e.g. EMBAppFrameworkReactNative.
+ 
+ @param enableIntegrationHelp If enabled (and only in development), the SDK will show an alert view when there's a critical error during the initialization process.
+ */
+- (void)startWithKey:(nonnull NSString *)apiKey
+       launchOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions
+           framework:(EMBAppFramework)framework
+enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 
 /**
  Manually forces the end of the current session and starts a new session.
@@ -680,6 +747,16 @@ Enables or disables embrace's internal trace logging.
  Resume coordinate capture
  */
 - (void)resumeTapCoordinateCapture;
+
+/**
+ Suspend tap element capture
+ */
+- (void)pauseTapElementCapture;
+
+/**
+ Resume tap element capture
+ */
+- (void)resumeTapElementCapture;
 
 /**
  Enables or disables background sessions
