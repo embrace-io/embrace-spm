@@ -39,6 +39,13 @@
 - (void)setReactNativeVersion:(nullable NSString *)version;
 
 /**
+ Sets the react native version number.
+ 
+ @param version react native sdk version number.
+ */
+- (void)setEmbraceReactNativeSdkVersion:(nullable NSString *)version;
+
+/**
  Sets javascript patch number.
  
  @param number javascript patch number.
