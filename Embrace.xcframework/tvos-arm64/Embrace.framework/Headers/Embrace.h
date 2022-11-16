@@ -759,12 +759,16 @@ Enables or disables embrace's internal trace logging.
 - (void)resumeTapElementCapture;
 
 /**
+ DEPRECATED
+ 
  Enables or disables background sessions
  */
-- (void)setBackgroundSessionMode:(EMBBackgroundSessionMode)mode;
-
+- (void)setBackgroundSessionMode:(EMBBackgroundSessionMode)mode
+DEPRECATED_MSG_ATTRIBUTE("Enabling background capture is now through through the dash. For more information, check here https://embrace.io/docs/ios/features/background-sessions/");
 /**
  Enables or disables airplane mode
+ 
+ Enabling airplane mode prevents all network traffic from the SDK. Use sparingly as this wil prevent any session data from making it to the embrace dash.
  */
 - (void)setAirplaneModeEnabled:(BOOL)enabled;
 
