@@ -242,6 +242,9 @@ function upload() {
     elif [ -n "$BUILT_PRODUCTS_DIR" ] ; then
       framework_search_path=$BUILT_PRODUCTS_DIR
       log "Using BUILT_PRODUCTS_DIR to set framework search path"
+    elif [ -n "$CI_ARCHIVE_PATH" ] ; then
+      framework_search_path=$CI_ARCHIVE_PATH
+      log "Using CI_ARCHIVE_PATH to set framework search path"
     fi
 
     if [ -n "$EMBRACE_FRAMEWORK_SEARCH_DEPTH" ] ; then
