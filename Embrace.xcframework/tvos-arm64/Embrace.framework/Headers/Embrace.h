@@ -736,7 +736,7 @@ Enables or disables embrace's internal trace logging.
 /**
  Enables or disables embrace's clean logging format
  */
-- (void)setCleanLogsEnabled:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("This will no longer be supported.");
+- (void)setCleanLogsEnabled:(BOOL)enabled;
 
 /**
  Suspend coordinate capture
