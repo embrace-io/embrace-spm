@@ -59,6 +59,13 @@ DEFAULT_FRAMEWORK_SEARCH_DEPTH=2
 UPLOAD_BIN=upload
 UPLOAD_RELATIVE_PATH=EmbraceIO/${UPLOAD_BIN}
 
+# Allow override of the store host, default to empty to use default store
+if [ -n "$EMBRACE_STORE_HOST" ] ; then
+  host_arg="--host $EMBRACE_STORE_HOST"
+else
+  host_arg=""
+fi
+
 function log () {
     # xcode will mark log lines as warnings and errors if prefixed with the values below. the prefixes are removed and error and warning markers replace them.
     case $2 in
@@ -73,7 +80,7 @@ function log () {
         ;;
     esac
 
-    echo "$(date +"%Y/%m/%d %H:%M:%S") [Embrace dSYM Upload] ${prefix} $1"
+    echo "$(date +"%Y/%m/%d %H:%M:%S") [Embrace dSYM Upload] ${prefix}$1"
 }
 
 
@@ -171,7 +178,26 @@ function react_native_upload() {
     if [ -n "$react_args" ] ; then
         log "uploading react native resources with bundle at ${react_bundle_path} and map at ${react_map_path}"
         # shellcheck disable=2153
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $react_args --log-level $EMBRACE_LOG_LEVEL"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $react_args $host_arg --log-level $EMBRACE_LOG_LEVEL"
+    fi
+}
+
+function scrape_app_version() {
+    if [[ -n "$EMBRACE_APP_VERSION" ]]; then
+        # First, check if the user has set an environment variable app version explicitly to use
+        app_version=$EMBRACE_APP_VERSION
+        log "using app version set in env var EMBRACE_APP_VERSION = $app_version"
+    elif [[ -n "$BUILT_PRODUCTS_DIR" ]] && [[ -n "$BUILT_PRODUCTS_DIR" ]]; then
+        # PlistBuddy ships with macOS, so will be available for all macOS Xcode builds. Check it exists, just in case.
+        log "using app version from your Info.plist ($BUILT_PRODUCTS_DIR/$INFOPLIST_PATH)"
+        if command -v /usr/libexec/PlistBuddy &> /dev/null; then
+          app_version=$(/usr/libexec/PlistBuddy -c "Print :CFBundleShortVersionString" "$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH")
+          log "using app version (CFBundleShortVersionString) from Info.plist = $app_version"
+        else
+          log_error "unable to get app version from Info.plist as /usr/libexec/PlistBuddy executable was not found"
+        fi
+    else
+      unset app_version
     fi
 }
 
@@ -203,6 +229,13 @@ function upload() {
 
     log "Looking for app dSYM in $app_dsym_path"
 
+    scrape_app_version
+    if [ -n "$app_version" ] ; then
+      app_version_arg="--app-version $app_version"
+    else
+      app_version_arg=""
+    fi
+
     # Xcode will sometimes not have completed the GenerateDSYMFile step before it runs the upload script, so we allow
     # for a small delay to occur before continuing
     found=
@@ -220,7 +253,7 @@ function upload() {
         else
           icon_arg=""
         fi
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $icon_arg --dsym \"$app_dsym_file\" --log-level $EMBRACE_LOG_LEVEL"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $icon_arg $app_version_arg $host_arg --dsym \"$app_dsym_file\" --log-level $EMBRACE_LOG_LEVEL"
     else
         log_warning "No app dSYM file was found under BUILD_ROOT ${BUILD_ROOT}. Skipping upload."
     fi
@@ -268,7 +301,7 @@ function upload() {
             log "Queueing framework dSYM for upload: $dsym_full_path"
         done
         IFS=$ORIG_IFS
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $dsym_args --log-level $EMBRACE_LOG_LEVEL"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $dsym_args $app_version_arg $host_arg --log-level $EMBRACE_LOG_LEVEL"
     fi
 }
 
