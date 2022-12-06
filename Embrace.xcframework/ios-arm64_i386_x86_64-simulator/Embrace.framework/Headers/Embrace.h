@@ -736,7 +736,7 @@ Enables or disables embrace's internal trace logging.
 /**
  Enables or disables embrace's clean logging format
  */
-- (void)setCleanLogsEnabled:(BOOL)enabled;
+- (void)setCleanLogsEnabled:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("This will no longer be supported.");
 
 /**
  Suspend coordinate capture
@@ -760,12 +760,7 @@ Enables or disables embrace's internal trace logging.
 
 /**
  DEPRECATED
- 
- Enables or disables background sessions
- */
-- (void)setBackgroundSessionMode:(EMBBackgroundSessionMode)mode
-DEPRECATED_MSG_ATTRIBUTE("Enabling background capture is now through through the dash. For more information, check here https://embrace.io/docs/ios/features/background-sessions/");
-/**
+
  Enables or disables airplane mode
  
  Enabling airplane mode prevents all network traffic from the SDK. Use sparingly as this wil prevent any session data from making it to the embrace dash.

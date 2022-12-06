@@ -105,14 +105,24 @@
 // MARK: Represents the crash handler element specified in the Embrace config file.
 
 /**
- Control whether the Embrace SDK automatically attaches to the uncaught exception handler.
+ DEPRECATED. Control whether the Embrace SDK automatically attaches to the uncaught exception handler.
  
  @note Plist detail
     - Key: CRASH_REPORT_ENABLED
     - Type: Boolean
     - Default: false
  */
-@property (atomic, strong, readonly, nullable) NSNumber *crashReportEnabled;
+@property (atomic, strong, readonly, nullable) NSNumber *crashReportEnabled DEPRECATED_MSG_ATTRIBUTE("Please replace this property by crashReportProvider");
+
+/**
+ Control whether the crash report provider to handle the exceptions. Allowed values are `embrace`,  `crashlytics`, or `none`
+ 
+ @note Plist detail
+    - Key: CRASH_REPORT_PROVIDER
+    - Type: String
+    - Default: Will default to using the Embrace crash reporter.
+ */
+@property (atomic, strong, readonly, nullable) NSString *crashReportProvider;
 
 // MARK: Represents the startup moment configuration element specified in the Embrace config file.
 
