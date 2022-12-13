@@ -344,4 +344,25 @@
  */
 @property(atomic, assign, readonly) BOOL automaticViewCaptureEnabled;
 
+/**
+ Control whether automatic push notifications capture is enabled.
+ 
+ @note Plist detail
+    - Key: ENABLE_PUSH_NOTIFICATIONS_CAPTURE
+    - Type: Boolean
+    - Default: true
+ */
+@property(atomic, assign, readonly) BOOL pushNotificationsCaptureEnabled;
+
+/**
+ Disable this to prevent the Embrace SDK from capturing any data from the Push Notifications payloads.
+ Push Notifications will still be captured but only their timestamp and type will be recorded.
+ 
+ @note Plist detail
+    - Key: ENABLE_PUSH_NOTIFICATIONS_DATA_CAPTURE
+    - Type: Boolean
+    - Default: true
+ */
+@property(atomic, assign, readonly) BOOL pushNotificationsDataCaptureEnabled;
+
 @end
