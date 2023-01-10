@@ -91,4 +91,21 @@
       jsStackTrace:(nullable NSString *)jsStackTrace
         wasHandled:(BOOL)wasHandled;
 
+/**
+ Log a react native action (RNA). This will not work wheter the correct framework is not set.
+ 
+ @param actionName The name of react native action
+ @param output result state of the action
+ @param payloadSize size of the payload
+ @param properties An optional dictionary of up to 10 key/value pairs
+ @param startTime start time of the action
+ @param endTime end time of the action
+*/
+- (void)logRNA:(nonnull NSString *)actionName
+        output:(nonnull NSString *)output
+   payloadSize:(uint64_t)payloadSize
+    properties:(nullable EMBProperties *)properties
+     startTime:(nonnull NSDate *)startTime
+       endTime:(nonnull NSDate *)endTime;
+
 @end
