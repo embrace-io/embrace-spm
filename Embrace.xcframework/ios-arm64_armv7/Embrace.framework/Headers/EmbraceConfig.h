@@ -234,16 +234,6 @@
 @property(atomic, assign, readonly) BOOL nsurlconnectionProxyEnable;
 
 /**
- Control whether background fetch information is captured.
- 
- @note Plist detail
-    - Key: BACKGROUND_FETCH_CAPTURE_ENABLE
-    - Type: Boolean
-    - Default: false
- */
-@property(atomic, assign, readonly) BOOL backgroundFetchCaptureEnable;
-
-/**
  Public RSA key to encrypt and store the network capture payload as a base64 ng.
 
  Inlcude your public RSA key here, network body capture will be fully encrypted and only you can decrypt it using your private key.
@@ -345,14 +335,14 @@
 @property(atomic, assign, readonly) BOOL automaticViewCaptureEnabled;
 
 /**
- Control whether automatic push notifications capture is enabled.
+ Control whether automatic push notifications capture is enabled. Allowed values are `automatic`,  `manual`  or `disabled`.
  
  @note Plist detail
-    - Key: ENABLE_PUSH_NOTIFICATIONS_CAPTURE
-    - Type: Boolean
-    - Default: true
+    - Key: PUSH_NOTIFICATIONS_CAPTURE_MODE
+    - Type: String
+    - Default: Disabled
  */
-@property(atomic, assign, readonly) BOOL pushNotificationsCaptureEnabled;
+@property(atomic, strong, readonly, nullable) NSString *pushNotificationsCaptureMode;
 
 /**
  Disable this to prevent the Embrace SDK from capturing any data from the Push Notifications payloads.

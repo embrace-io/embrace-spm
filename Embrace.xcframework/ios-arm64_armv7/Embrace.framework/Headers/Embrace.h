@@ -759,6 +759,36 @@ Enables or disables embrace's internal trace logging.
 - (void)resumeTapElementCapture;
 
 /**
+ Notify Embrace that a push notification was received.
+ Should be called from your `UIApplicationDelegate` implementation of `application:didReceiveRemoteNotification:`.
+ This method should only be used if `PUSH_NOTIFICATIONS_CAPTURE_MODE` is set to `manual` in the EmbraceConfig.
+ 
+ @param useInfo The dictionary containing the notification data.
+ @return A boolean indicating whether the notification was captured or not.
+ */
+- (BOOL)applicationDidReceiveNotification:(nonnull NSDictionary *)useInfo;
+
+/**
+ Notify Embrace that a push notification response was received.
+ Should be called from your `UNUserNotificationCenter` delegate implementation of `serNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:`.
+ This method should only be used if `PUSH_NOTIFICATIONS_CAPTURE_MODE` is set to `manual` in the EmbraceConfig.
+ 
+ @param response The UNNotificationResponse received.
+ @return A boolean indicating whether the notification was captured or not.
+ */
+- (BOOL)applicationDidReceiveNotificationResponse:(nonnull UNNotificationResponse *)response API_AVAILABLE(ios(10.0)) API_UNAVAILABLE(tvos);
+
+/**
+ Notify Embrace that a silent push notification was received.
+ Should be called from your `UIApplicationDelegate` implementation of `application:performFetchWithCompletionHandler:`.
+ This method should only be used if `PUSH_NOTIFICATIONS_CAPTURE_MODE` is set to `manual` in the EmbraceConfig.
+ 
+ @return A boolean indicating whether the notification was captured or not.
+ */
+- (BOOL)applicationDidReceiveSilentNotification;
+
+
+/**
  DEPRECATED
 
  Enables or disables airplane mode
