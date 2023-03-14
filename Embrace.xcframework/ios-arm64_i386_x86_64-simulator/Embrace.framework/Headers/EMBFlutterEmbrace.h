@@ -72,4 +72,28 @@
     flutterContext:(nullable NSString *)flutterContext
     flutterLibrary:(nullable NSString *)flutterLibrary
         wasHandled:(BOOL)wasHandled;
+
+/**
+ Log a flutter exception through the native embrace sdk.
+ 
+ @param name The name of the message, which is how it will show up on the dashboard
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of up to 10 key/value pairs
+ @param takeScreenshot A flag for whether the SDK should take a screenshot of the application window to display on the dashboard
+ @param flutterStackTrace dart stack trace coming from the the flutter side
+ @param flutterContext context associated with the error
+ @param flutterLibrary library associated with the error
+ @param flutterErrorType runtime type of the error
+ @param wasHandled mark it as handled or not
+*/
+- (void)logMessage:(nullable NSString *)name
+      withSeverity:(EMBSeverity)severity
+        properties:(nullable NSDictionary *)properties
+    takeScreenshot:(BOOL)takeScreenshot
+ flutterStackTrace:(nullable NSString *)flutterStackTrace
+    flutterContext:(nullable NSString *)flutterContext
+    flutterLibrary:(nullable NSString *)flutterLibrary
+  flutterErrorType:(nullable NSString *)flutterErrorType
+        wasHandled:(BOOL)wasHandled;
+
 @end
