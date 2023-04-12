@@ -16,7 +16,6 @@
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
 #import <Embrace/EMBFlutterEmbrace.h>
-
 /**
  Project version number for the Embrace framework.
  */
