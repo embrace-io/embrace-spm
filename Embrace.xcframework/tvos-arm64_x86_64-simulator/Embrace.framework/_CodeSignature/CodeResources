@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		2HQIvN+LkMdZ4sKkB52nabFoFbk=
+		b4QTw1Cb2eyrGVwgt+qo2L0kbWA=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		94VBC3UvZhTFCM74Chd2yrFInW4=
+		ZabJT2SIJIIz54Snb5ZIZAhZmgE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -140,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2HQIvN+LkMdZ4sKkB52nabFoFbk=
+			b4QTw1Cb2eyrGVwgt+qo2L0kbWA=
 			</data>
 			<key>hash2</key>
 			<data>
-			9vjB1IyQeiZaAYBdtBiFfXZGvJ+0eLN6aeMnCvcClUs=
+			v09C/LT7UYr/Fy1gy0D+mt4PHgV1CZWDeipzBoTwdTU=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
