@@ -16,6 +16,10 @@
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
 #import <Embrace/EMBFlutterEmbrace.h>
+
+#if __has_include(<WebKit/WebKit.h>)
+#import <WebKit/WebKit.h>
+#endif
 /**
  Project version number for the Embrace framework.
  */
@@ -795,5 +799,11 @@ Enables or disables embrace's internal trace logging.
  Enabling airplane mode prevents all network traffic from the SDK. Use sparingly as this wil prevent any session data from making it to the embrace dash.
  */
 - (void)setAirplaneModeEnabled:(BOOL)enabled;
+
+#if __has_include(<WebKit/WebKit.h>)
+- (void)trackPerformanceInWebView:(nonnull WKWebView *)webView;
+#endif
+ 
+- (void)trackWebViewPerformance:(NSString *)tag message:(NSString *)message;
 
 @end
