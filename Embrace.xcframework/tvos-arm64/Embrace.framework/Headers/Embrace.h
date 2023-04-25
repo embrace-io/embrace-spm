@@ -693,7 +693,7 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 - (void)clearAllUserPersonas;
 
 /**
- Manually log a network request. In most cases the Embrace SDK automatically captures the details of your network requests.  
+ Manually log a network request. In most cases the Embrace SDK automatically captures the details of your network requests.
  You can use this method to log any requests that the SDK is not capturing automatically.
 
  @param request An EMBNetworkRequest with at least the following set: url, method, start time, end time, and either status code or error.
@@ -801,9 +801,20 @@ Enables or disables embrace's internal trace logging.
 - (void)setAirplaneModeEnabled:(BOOL)enabled;
 
 #if __has_include(<WebKit/WebKit.h>)
+/**
+ Tracks the performance inside a `WKWebView`.
+ 
+ @param webView The `WKWebView` to be instrumented.
+ */
 - (void)trackPerformanceInWebView:(nonnull WKWebView *)webView;
 #endif
  
-- (void)trackWebViewPerformance:(NSString *)tag message:(NSString *)message;
+/**
+ Manually tracks the performance of a Web View.
+ 
+ @param tag An identifier to create a key for the instrumented WebView.
+ @param message A string containing the performance metrics in a specific json format. If the format is not valid, it'll be ignored.
+ */
+- (void)trackWebViewPerformance:(nonnull NSString *)tag message:(nonnull NSString *)message;
 
 @end
