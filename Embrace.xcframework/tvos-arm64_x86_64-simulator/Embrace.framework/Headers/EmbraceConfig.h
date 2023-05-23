@@ -245,6 +245,16 @@
  */
 @property(atomic, strong, readonly, nullable) NSString *networkCapturePublicKey;
 
+/**
+ Specify if the SDK will capture network requests automatically.
+ 
+ @note Plist detail
+    - Key: NETWORK_CAPTURE_ENABLED
+    - Type: Number
+    - Default: YES
+ */
+@property(atomic, strong, readonly, nonnull) NSNumber* isNetworkCaptureEnabled;
+
 // MARK: Represents the session configuration element specified in the Embrace config file.
 
 /**
