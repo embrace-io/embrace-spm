@@ -32,9 +32,13 @@
 		<data>
 		BGWsbwVQXZ18wl0WqrldodVEBFw=
 		</data>
+		<key>Headers/EMBUploadModuleReachabilityMonitor.h</key>
+		<data>
+		2/y5HcE+6TCIVvQwEiZn9OtctZQ=
+		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		b4QTw1Cb2eyrGVwgt+qo2L0kbWA=
+		BVkSYN26F8qBPVQoxhssZ2T6LlI=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
@@ -46,7 +50,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZsEGiucQLMGkPM4m927KmjFW188=
+		D0WqHgWTXujF8YHCNjy/c1XNZeo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -136,15 +140,26 @@
 			l3IcmIw0f5I6hWKozEYTqOYWAf5hnlC7Om3fqIsE9Ts=
 			</data>
 		</dict>
+		<key>Headers/EMBUploadModuleReachabilityMonitor.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2/y5HcE+6TCIVvQwEiZn9OtctZQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			pPkj07EdZ4GCrB9UIT6g3x0akiqM+fYqrE/RHmpsvkM=
+			</data>
+		</dict>
 		<key>Headers/Embrace.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			b4QTw1Cb2eyrGVwgt+qo2L0kbWA=
+			BVkSYN26F8qBPVQoxhssZ2T6LlI=
 			</data>
 			<key>hash2</key>
 			<data>
-			v09C/LT7UYr/Fy1gy0D+mt4PHgV1CZWDeipzBoTwdTU=
+			ICY6mNwmmOR862sXlvmfRPY6CedMU1QaJxJ4qg0grXg=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>

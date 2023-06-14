@@ -798,7 +798,7 @@ Enables or disables embrace's internal trace logging.
  
  Enabling airplane mode prevents all network traffic from the SDK. Use sparingly as this wil prevent any session data from making it to the embrace dash.
  */
-- (void)setAirplaneModeEnabled:(BOOL)enabled;
+- (void)setAirplaneModeEnabled:(BOOL)enabled DEPRECATED_MSG_ATTRIBUTE("No longer supported.");
 
 #if __has_include(<WebKit/WebKit.h>)
 /**
