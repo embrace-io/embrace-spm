@@ -15,6 +15,27 @@
 #endif
 
 /**
+ The last state of the app
+ */
+typedef NS_ENUM(NSInteger, EMBLastRunEndState) {
+
+    /**
+     The SDK has not been started yet or the crash provider is not Embrace
+     */
+    EMBLastRunEndStateInvalid = 0,
+
+    /**
+     The last run resulted in a crash
+     */
+    EMBLastRunEndStateCrash = 1,
+
+    /**
+     The last run did not result in a crash
+     */
+    EMBLastRunEndStateCleanExit = 2,
+};
+
+/**
  The log levels are used to filter internal logging.
  */
 typedef NS_ENUM(NSInteger, EMBLogLevel) {

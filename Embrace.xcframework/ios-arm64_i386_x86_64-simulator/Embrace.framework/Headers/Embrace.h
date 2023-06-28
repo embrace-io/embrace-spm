@@ -64,6 +64,17 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
 
 @property (nonatomic) BOOL isStarted;
 
+/*
+ Returns EMBLastRunStateCrash if there was a crash since the last cold start.
+ Otherwise it returns EMBLastRunStateCleanExit
+ If called before start* functions, will always return EMBLastRunStateInvalid
+ 
+ note, this will only work with the Embrace CRASH_REPORT_PROVIDER. If called when
+ using Crashlaytic CRASH_REPORT_PROVIDER then it will always return EMBLastRunStateInvalid.
+ */
+
+@property (nonatomic, readonly) EMBLastRunEndState lastRunEndState;
+
 /**
  Returns the shared `Embrace` singleton object.
  */
