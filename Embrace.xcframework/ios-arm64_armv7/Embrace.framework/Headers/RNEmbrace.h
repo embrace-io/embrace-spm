@@ -72,7 +72,7 @@
       withSeverity:(EMBSeverity)severity
         properties:(nullable NSDictionary *)properties
     takeScreenshot:(BOOL)takeScreenshot
-      jsStackTrace:(nullable NSString *)jsStackTrace;
+      jsStackTrace:(nullable NSString *)jsStackTrace DEPRECATED_MSG_ATTRIBUTE("Use the new logHandledExceptionWithName and logUnhandledExceptionWithName methods");
 
 /**
  Log a ReactNative exception through the native embrace sdk.
@@ -89,7 +89,35 @@
         properties:(nullable NSDictionary *)properties
     takeScreenshot:(BOOL)takeScreenshot
       jsStackTrace:(nullable NSString *)jsStackTrace
-        wasHandled:(BOOL)wasHandled;
+        wasHandled:(BOOL)wasHandled DEPRECATED_MSG_ATTRIBUTE("Use the new logHandledExceptionWithName and logUnhandledExceptionWithName methods");
+
+/**
+ Log a ReactNative handled exception through the native embrace sdk.
+ 
+ @param name The name of the exception
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of up to 10 key/value pairs
+ @param stackTrace dart stack trace coming from the the flutter side
+*/
+- (void)logHandledExceptionWithName:(nonnull NSString *)name
+                           severity:(EMBSeverity)severity
+                         properties:(nullable NSDictionary *)properties
+                         stackTrace:(nullable NSString *)stackTrace
+                     takeScreenshot:(BOOL)takeScreenshot;
+
+/**
+ Log a ReactNative unhandled exception through the native embrace sdk.
+ 
+ @param name The name of the exception
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of up to 10 key/value pairs
+ @param stackTrace dart stack trace coming from the the flutter side
+*/
+- (void)logUnhandledExceptionWithName:(nonnull NSString *)name
+                             severity:(EMBSeverity)severity
+                           properties:(nullable NSDictionary *)properties
+                           stackTrace:(nullable NSString *)stackTrace
+                       takeScreenshot:(BOOL)takeScreenshot;
 
 /**
  Log a react native action (RNA). This will not work wheter the correct framework is not set.
