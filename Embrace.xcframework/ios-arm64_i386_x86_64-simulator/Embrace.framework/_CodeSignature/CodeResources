@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/EMBFlutterEmbrace.h</key>
 		<data>
-		QE1Oc53Ukh5jse7ToVkHhHsCYTg=
+		aFXc7rEl2R42EDuW5+2Jcj5JnOo=
 		</data>
 		<key>Headers/EMBNetworkRequest.h</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
-		DYJBJiDM2WReq8Gp6olYeLoJMg8=
+		4sXykv1IejP8dWQA5GR1Yv0cjAc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Kr8PH53DPjkkC3m6WT7WW1ZqlBo=
+		fB4fwKHGhJs9SiI9n2hega1/a4U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,11 +89,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QE1Oc53Ukh5jse7ToVkHhHsCYTg=
+			aFXc7rEl2R42EDuW5+2Jcj5JnOo=
 			</data>
 			<key>hash2</key>
 			<data>
-			57mIu68QgsLZ5XQsslI/JC5TZy6Vn0fPO+SzUdYJWUw=
+			p6RqjjQUN/jXRYX6V8+49JdQNop3uIHPO9MwniB7KDI=
 			</data>
 		</dict>
 		<key>Headers/EMBNetworkRequest.h</key>
@@ -177,11 +177,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DYJBJiDM2WReq8Gp6olYeLoJMg8=
+			4sXykv1IejP8dWQA5GR1Yv0cjAc=
 			</data>
 			<key>hash2</key>
 			<data>
-			o6YAownhKlGtfjaY4uLL8FczoYRDXq8WtsfdXcMYpJI=
+			dQRWAkF8gSLouDTC773NHl4R8UHpS5pbr6En0x2X+Pk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

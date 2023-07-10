@@ -50,7 +50,7 @@
     takeScreenshot:(BOOL)takeScreenshot
  flutterStackTrace:(nullable NSString *)flutterStackTrace
     flutterContext:(nullable NSString *)flutterContext
-    flutterLibrary:(nullable NSString *)flutterLibrary;
+    flutterLibrary:(nullable NSString *)flutterLibrary DEPRECATED_MSG_ATTRIBUTE("Use the new logHandledExceptionWithName and logUnhandledExceptionWithName methods");
 
 /**
  Log a flutter exception through the native embrace sdk.
@@ -71,7 +71,7 @@
  flutterStackTrace:(nullable NSString *)flutterStackTrace
     flutterContext:(nullable NSString *)flutterContext
     flutterLibrary:(nullable NSString *)flutterLibrary
-        wasHandled:(BOOL)wasHandled;
+        wasHandled:(BOOL)wasHandled DEPRECATED_MSG_ATTRIBUTE("Use the new logHandledExceptionWithName and logUnhandledExceptionWithName methods");
 
 /**
  Log a flutter exception through the native embrace sdk.
@@ -94,6 +94,36 @@
     flutterContext:(nullable NSString *)flutterContext
     flutterLibrary:(nullable NSString *)flutterLibrary
   flutterErrorType:(nullable NSString *)flutterErrorType
-        wasHandled:(BOOL)wasHandled;
+        wasHandled:(BOOL)wasHandled DEPRECATED_MSG_ATTRIBUTE("Use the new logHandledExceptionWithName and logUnhandledExceptionWithName methods");
+
+/**
+ Log a flutter handled exception through the native embrace sdk.
+ 
+ @param name The name of the exception
+ @param message The message of the exception
+ @param stackTrace dart stack trace coming from the the flutter side
+ @param context context associated with the error
+ @param library library associated with the error
+*/
+- (void)logHandledExceptionWithName:(nonnull NSString *)name
+                            message:(nonnull NSString *)message
+                         stackTrace:(nullable NSString *)stackTrace
+                            context:(nullable NSString *)context
+                            library:(nullable NSString *)library;
+
+/**
+ Log a flutter unhandled exception through the native embrace sdk.
+ 
+ @param name The name of the exception
+ @param message The message of the exception
+ @param stackTrace dart stack trace coming from the the flutter side
+ @param context context associated with the error
+ @param library library associated with the error
+*/
+- (void)logUnhandledExceptionWithName:(nonnull NSString *)name
+                              message:(nonnull NSString *)message
+                           stackTrace:(nullable NSString *)stackTrace
+                              context:(nullable NSString *)context
+                              library:(nullable NSString *)library;
 
 @end
