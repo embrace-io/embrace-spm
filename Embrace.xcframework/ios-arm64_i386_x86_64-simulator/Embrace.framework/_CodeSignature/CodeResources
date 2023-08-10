@@ -38,11 +38,15 @@
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		eo8d73+FbqNqdWi8TWORcdhYJVY=
+		vpp9rvZ4z5cTo1EB7nrOdy/HxnI=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
-		iNKb+MOt7ZVWrAps31YEjrdCFP4=
+		OoI4/+sHUTFECrl6PInixAUMtcY=
+		</data>
+		<key>Headers/EmbraceExtension.h</key>
+		<data>
+		DGuFycLa9T+DQkUX37LkZWRuXm0=
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
@@ -50,7 +54,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fB4fwKHGhJs9SiI9n2hega1/a4U=
+		9/3aqNm7p8HT98n/9WN7q+zwJLA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -58,7 +62,7 @@
 		</data>
 		<key>PrivateHeaders/Embrace+ConfigModule.h</key>
 		<data>
-		xqiyT0wKulJZscmZjHWTX91ouyY=
+		WlWK7wgC1iZ9/fP52XNuD1nrPmw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -155,22 +159,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eo8d73+FbqNqdWi8TWORcdhYJVY=
+			vpp9rvZ4z5cTo1EB7nrOdy/HxnI=
 			</data>
 			<key>hash2</key>
 			<data>
-			kuZvPFk1FiFFRv+h+Pepg8bxQ48IaUtnQbMyyMgTTak=
+			E5+M0JJncCL6FDRlq3IThxZgClHTTM2r/eaDHeIgcvo=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iNKb+MOt7ZVWrAps31YEjrdCFP4=
+			OoI4/+sHUTFECrl6PInixAUMtcY=
 			</data>
 			<key>hash2</key>
 			<data>
-			7sBpdu7ZRGrZrrRe+TNSWHfCkae8cyWsia0ERanrk8g=
+			abVi+iBmgkQ3f6LqjR/dfF3zYmTQD5trYBAhKqUGyMI=
+			</data>
+		</dict>
+		<key>Headers/EmbraceExtension.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			DGuFycLa9T+DQkUX37LkZWRuXm0=
+			</data>
+			<key>hash2</key>
+			<data>
+			aLpzJFBwqKDWmg460CScmCKWgit8/k1p5CjjaBnnT28=
 			</data>
 		</dict>
 		<key>Headers/RNEmbrace.h</key>
@@ -199,11 +214,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xqiyT0wKulJZscmZjHWTX91ouyY=
+			WlWK7wgC1iZ9/fP52XNuD1nrPmw=
 			</data>
 			<key>hash2</key>
 			<data>
-			C0+YKM5s3X6re+shzAXm/fOqcPxfJ/QVGKe1vhnfoV0=
+			6iu+cSHI1KG54oZqkvdwsW9KIdbFojDyZsfxKiOftoI=
 			</data>
 		</dict>
 	</dict>

@@ -12,8 +12,10 @@
 #import "Embrace.h"
 #import "EMBConfigModule.h"
 #import "EMBConfigManager.h"
+#import "EMBAppGroupCrashSender.h"
+#import "EMBAppGroupSessionSender.h"
 
-@interface Embrace (ConfigModule) <EMBConfigModuleDelegate>
+@interface Embrace (ConfigModule) <EMBConfigModuleDelegate, EMBAppGroupCrashSenderDelegate, EMBAppGroupSessionSenderDelegate>
 
 @property NSUInteger configFetchInterval;
 @property dispatch_queue_t configQueue;
