@@ -16,6 +16,7 @@
 #import <Embrace/EMBSubscriptionPurchaseFlow.h>
 #import <Embrace/RNEmbrace.h>
 #import <Embrace/EMBFlutterEmbrace.h>
+#import <Embrace/EmbraceExtension.h>
 
 #if __has_include(<WebKit/WebKit.h>)
 #import <WebKit/WebKit.h>

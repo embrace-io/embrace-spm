@@ -365,4 +365,14 @@
  */
 @property(atomic, assign, readonly) BOOL pushNotificationsDataCaptureEnabled;
 
+/**
+ The App Group Identifier. This is used to allow app extensions to share information with the host app.
+ 
+ @note Plist detail
+    - Key: APP_GROUP_IDENTIFIER
+    - Type: String
+    - Default: N/A
+ */
+@property (atomic, strong, readonly, nullable) NSString *appGroupIdentifier;
+
 @end
