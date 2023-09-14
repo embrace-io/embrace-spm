@@ -13,7 +13,7 @@
  Base class for creating custom domain-specific flows that are essentially convenience wrappers around existing SDK
  functionality.
  */
-
+__attribute__((deprecated("This class is deprecated. Please contact Embrace if you have a use case for this API and wish to see an alternative.")))
 @interface EMBCustomFlow : NSObject
 
 /**

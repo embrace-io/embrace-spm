@@ -11,7 +11,7 @@
 #ifndef DEBUG
 #define EMBLogDefaultLevel EMBLogLevelInfo
 #else
-#define EMBLogDefaultLevel EMBLogLevelDebug
+#define EMBLogDefaultLevel EMBLogLevelNone
 #endif
 
 /**

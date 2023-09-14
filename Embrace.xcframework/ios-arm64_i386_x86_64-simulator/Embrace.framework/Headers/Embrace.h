@@ -17,6 +17,7 @@
 #import <Embrace/RNEmbrace.h>
 #import <Embrace/EMBFlutterEmbrace.h>
 #import <Embrace/EmbraceExtension.h>
+#import <Embrace/EmbraceTracer.h>
 
 #if __has_include(<WebKit/WebKit.h>)
 #import <WebKit/WebKit.h>
@@ -52,7 +53,7 @@ FOUNDATION_EXPORT const unsigned char EmbraceVersionString[];
 /**
  Entry point for Embrace SDK.
  */
-@interface Embrace : NSObject
+@interface Embrace : NSObject <EmbraceTracer>
 
 /**
  Optional delegate property that can be set to receive callbacks about the Embrace.io SDK's operations
@@ -315,7 +316,7 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  */
 - (void)startMomentWithName:(nonnull NSString *)name
                  identifier:(nullable NSString *)identifier
-            allowScreenshot:(BOOL)allowScreenshot;
+            allowScreenshot:(BOOL)allowScreenshot  DEPRECATED_MSG_ATTRIBUTE("Please replace calls to start app moments with methods of the form startMomentWithName:identifier:");
 
 /**
  Starts recording data for an app moment with the provided name, optional identifier, and optional key/value metadata
@@ -352,7 +353,7 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 - (void)startMomentWithName:(nonnull NSString *)name
                  identifier:(nullable NSString *)identifier
             allowScreenshot:(BOOL)allowScreenshot
-                 properties:(nullable EMBProperties *)properties;
+                 properties:(nullable EMBProperties *)properties  DEPRECATED_MSG_ATTRIBUTE("Please replace calls to start app moments with methods of the form startMomentWithName:identifier:properties:");
 
 /**
  Stops recording data for an app moment with the provided name.
@@ -520,11 +521,38 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 - (void)logMessage:(nonnull NSString *)name
       withSeverity:(EMBSeverity)severity
         properties:(nullable EMBProperties *)properties
-    takeScreenshot:(BOOL)takeScreenshot;
+    takeScreenshot:(BOOL)takeScreenshot  DEPRECATED_MSG_ATTRIBUTE("Please replace calls to logMessage with methods of the form logMessage:severity:properties:");
+
+/**
+ Logs an INFO event in your application for aggregation and debugging on the Embrace.io dashboard.
+
+ Events are grouped by name and severity.
+
+ @param name The name of the message, which is how it will show up on the dashboard
+ */
+- (void)logInfo:(nonnull NSString *)name;
+
+/**
+ Logs a WARNING event in your application for aggregation and debugging on the Embrace.io dashboard.
+
+ Events are grouped by name and severity.
+ 
+ @param name The name of the message, which is how it will show up on the dashboard
+ */
+- (void)logWarning:(nonnull NSString *)name;
+
+/**
+ Logs an ERROR event in your application for aggregation and debugging on the Embrace.io dashboard.
+
+ Events are grouped by name and severity.
+
+ @param name The name of the message, which is how it will show up on the dashboard
+ */
+- (void)logError:(nonnull NSString *)name;
 
 /**
  Logs an informative message to the Embrace.io API for aggregation and viewing on the dashboard.
- 
+
  @param message The message used to find the log later, which is how it will be aggregated on the web dashboard
  @param properties An optional dictionary of custom key/value properties to be sent with the message
  */
@@ -567,6 +595,18 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  */
 - (void)logHandledError:(nonnull NSError *)error
              screenshot:(BOOL)screenshot
+             properties:(nullable EMBProperties *)properties DEPRECATED_MSG_ATTRIBUTE("Please replace calls to logHandledError with methods of the form logHandledError:properties:");
+
+/**
+ Logs an Error or NSError object to the Embrace.io API for aggregation on the dashboard. These errors will be treated similarly to
+ error log messages, but the serialization will be done by Embrace. During the serialization calls, the error description,
+ reason, domain, and code will be logged as properties. As with error logs, a stack trace will be taken, and
+error properties can be specified.
+
+ @param error The handled error object, which will be serialized and combined with the stack trace to aggregate the errors on the dashboard view.
+ @param properties An optional dictionary of custom key/value properties to be sent with the error log.
+ */
+- (void)logHandledError:(nonnull NSError *)error
              properties:(nullable EMBProperties *)properties;
 
 /**
@@ -612,13 +652,27 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
  @param properties An optional dictionary of custom key/value properties to be sent with the error log.
  @param customStackTrace A custom Stack Trace to be logged and displayed on the dashboard view. If this object is not nil, the Exception Stack Trace will be ignored.
+ */
+- (void)logHandledException:(nonnull NSException *)exception
+               withSeverity:(EMBSeverity)severity
+                 properties:(nullable EMBProperties *)properties
+           customStackTrace:(nullable NSArray<NSString*> *)customStackTrace;
+
+/**
+ Logs a handled exception to the Embrace.io API for aggregation and viewing on the dashboard.
+ The log will include the stacktrace found on the exception.
+
+ @param exception The handled exception object, which will be serialized and combined with the stack trace to aggregate the errors on the dashboard view.
+ @param severity Will flag the message as one of info, warning, or error for filtering on the dashboard
+ @param properties An optional dictionary of custom key/value properties to be sent with the error log.
+ @param customStackTrace A custom Stack Trace to be logged and displayed on the dashboard view. If this object is not nil, the Exception Stack Trace will be ignored.
  @param takeScreenshot A flag for whether the SDK should take a screenshot of the application window to display on the dashboard
  */
 - (void)logHandledException:(nonnull NSException *)exception
                withSeverity:(EMBSeverity)severity
                  properties:(nullable EMBProperties *)properties
            customStackTrace:(nullable NSArray<NSString*> *)customStackTrace
-             takeScreenshot:(BOOL)takeScreenshot;
+             takeScreenshot:(BOOL)takeScreenshot  DEPRECATED_MSG_ATTRIBUTE("Please replace calls to logHandledException with methods of the form logHandledException:severity:properties:customStacktrace:");
 
 /**
  Logs a custom message within this session for the Embrace dashboard to surface on the Session Timeline and within
@@ -630,7 +684,20 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  
  @param message The message that will be displayed within the session's Activity Log on the dashboard.
  */
-- (void)logBreadcrumbWithMessage:(nonnull NSString *)message;
+- (void)logBreadcrumbWithMessage:(nonnull NSString *)message DEPRECATED_MSG_ATTRIBUTE("Use addBreadcrumbWithMessage instead. This method will be removed in future versions.");
+
+
+/**
+Logs a custom message within this session for the Embrace dashboard to surface on the Session Timeline and within
+the Activity Log.
+
+This will NOT trigger an http request to the Embrace.io backend and is useful for adding additional context to the
+actions a user performed within a session. Good uses for breadcrumbs could be your app's console error output
+or notes that significant events (add item to cart, start conversation, receive push notification) occurred.
+
+@param message The message that will be displayed within the session's Activity Log on the dashboard.
+*/
+- (void)addBreadcrumbWithMessage:(nonnull NSString *)message;
 
 /**
  Get the user identifier assigned to the device by Embrace
@@ -638,6 +705,16 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  @return A device identifier created by Embrace
  */
 - (nullable NSString *)getDeviceId;
+
+/**
+ Get the ID for the current session. Returns nil if a session has not been started yet or the SDK hasn't been initialized.
+
+ In order to prevent getting a nil value, try to avoid calling this method right after initializing the SDK or immediately after coming back from background.
+ Please allow the SDK some time in order to confirm a new session has started before calling this method.
+ 
+ @return The ID for the current Session, if available.
+ */
+- (nullable NSString *)getCurrentSessionId;
 
 /**
  Associates the current app user with an internal identifier (e.g. your system's uid) to be made searchable in the dashboard.
@@ -692,7 +769,14 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
  
  Accepts string values to help you categorize and understand your users
  */
-- (void)setUserPersona:(nonnull NSString *)persona;
+- (void)setUserPersona:(nonnull NSString *)persona  DEPRECATED_MSG_ATTRIBUTE("Use addUserPersona instead. This method will be removed in future versions.");
+
+/**
+ Adds a custom persona for the current app user.
+ 
+ Accepts string values to help you categorize and understand your users
+ */
+- (void)addUserPersona:(nonnull NSString *)persona;
 
 /**
  Removes the given custom persona for the current app user.
@@ -710,7 +794,15 @@ enableIntegrationHelp:(BOOL)enableIntegrationHelp;
 
  @param request An EMBNetworkRequest with at least the following set: url, method, start time, end time, and either status code or error.
  */
-- (void)logNetworkRequest:(nonnull EMBNetworkRequest *)request;
+- (void)logNetworkRequest:(nonnull EMBNetworkRequest *)request DEPRECATED_MSG_ATTRIBUTE("Deprecated: use recordNetworkRequest instead. This method will be removed in future versions.");
+
+/**
+ Manually record a network request. In most cases the Embrace SDK automatically captures the details of your network requests.
+ You can use this method to log any requests that the SDK is not capturing automatically.
+
+ @param request An EMBNetworkRequest with at least the following set: url, method, start time, end time, and either status code or error.
+ */
+- (void)recordNetworkRequest:(nonnull EMBNetworkRequest *)request;
 
 /**
  Logs enhanced metrics for a given URLSessionTask
@@ -828,5 +920,28 @@ Enables or disables embrace's internal trace logging.
  @param message A string containing the performance metrics in a specific json format. If the format is not valid, it'll be ignored.
  */
 - (void)trackWebViewPerformance:(nonnull NSString *)tag message:(nonnull NSString *)message;
+
+///
+/// Create a span with the given name
+/// This span will not have a start time set, the caller should also call `start` on the span when timing should begin.
+///
+/// @Return Returns a Span that has not yet been started
+///
+- (nonnull id<EmbraceOTelSpan>) createSpanNamed:(nonnull NSString *)name;
+
+///
+/// Records a span for the runtime of the operation block passed.
+///
+/// @Discussion If your operation does not have a return value (void) and you are calling from ObjC,
+///             see `recordSpanNamed:parent:block:` to allow for the void return type.
+///
+/// @Return Returns the value returned from the operation block
+///
+- (nullable id)recordSpanNamed:(nonnull NSString *)name operation:(id _Nullable (^_Nonnull)(void))operation;
+
+///
+/// Records a span for the runtime of the block parameter. Does not return value from the block.
+///
+- (void)recordSpanNamed:(nonnull NSString *)name block:(void (^_Nonnull)(void))block NS_SWIFT_UNAVAILABLE("Use recordSpanNamed:operation: instead.");
 
 @end
