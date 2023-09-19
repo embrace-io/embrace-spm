@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EmbraceOTelSpanErrorCode.h"
-#import "EmbraceEventData.h"
+#import <Embrace/EmbraceOTelSpanErrorCode.h>
+#import <Embrace/EmbraceEventData.h>
 
 #ifndef EmbraceOTelSpan_h
 #define EmbraceOTelSpan_h
@@ -29,8 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) addEventNamed:(NSString *)name time: (NSUInteger) time attributes: (nullable NSDictionary<NSString*, NSString*> *) attributes;
 
 -(void) addAttributeWithKey:(NSString *)key value: (NSString *)value;
-
-- (void) setAsKey:(BOOL)isKey;
 
 @end
 
