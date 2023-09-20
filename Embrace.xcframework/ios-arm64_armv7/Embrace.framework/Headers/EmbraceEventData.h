@@ -11,8 +11,14 @@
 
 @protocol EmbraceEventData
 
+
+/// The name of the event
 @property(nonnull, readonly) NSString *name;
+
+/// The unix time, in nanoseconds, at which this event occurred
 @property(readonly) NSUInteger time;
+
+/// A dictionary to add additional context
 @property(nonnull, readonly) NSDictionary <NSString *, NSString *>* attributes;
 
 @end

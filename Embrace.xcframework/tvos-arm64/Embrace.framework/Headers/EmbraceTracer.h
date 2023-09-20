@@ -6,9 +6,9 @@
 //  Copyright © 2023 embrace.io. All rights reserved.
 //
 
-#import "EmbraceOTelSpan.h"
-#import "EmbraceEventData.h"
-#import "EmbraceOTelSpanErrorCode.h"
+#import <Embrace/EmbraceOTelSpan.h>
+#import <Embrace/EmbraceEventData.h>
+#import <Embrace/EmbraceOTelSpanErrorCode.h>
 
 #ifndef EmbraceTracer_h
 #define EmbraceTracer_h
