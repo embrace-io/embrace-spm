@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/EMBConstants.h</key>
 		<data>
-		Z0Msb/Hk7tbLhsgdUAIo9gpcHbY=
+		LOf9aVCfm4HkXAHX32sOToGVxcw=
 		</data>
 		<key>Headers/EMBCustomFlow.h</key>
 		<data>
-		8GcAdfFp9CACDSSwj/AmAIKpMfk=
+		kXFt/RYTVSMKS7gPpASV9TjXJvA=
 		</data>
 		<key>Headers/EMBFlutterEmbrace.h</key>
 		<data>
@@ -18,35 +18,47 @@
 		</data>
 		<key>Headers/EMBNetworkRequest.h</key>
 		<data>
-		2pDwPHiEL8Ki2eH8Xrm9lkWavTM=
+		qTHY2GLwPB6Wreebq1Xfk2QD5Ok=
 		</data>
 		<key>Headers/EMBPurchaseFlow.h</key>
 		<data>
-		fln7youNJt3wYDCCvtvLTDqACLM=
+		niYeiLZd589FqJvtvvdf36/I5ks=
 		</data>
 		<key>Headers/EMBRegistrationFlow.h</key>
 		<data>
-		nfjA+gv524HXO4LhcFOlikn0ELk=
+		uNzyfDWBmu0WbJudW0agyqvhHH8=
 		</data>
 		<key>Headers/EMBSubscriptionPurchaseFlow.h</key>
 		<data>
-		BGWsbwVQXZ18wl0WqrldodVEBFw=
-		</data>
-		<key>Headers/EMBUploadModuleReachabilityMonitor.h</key>
-		<data>
-		2/y5HcE+6TCIVvQwEiZn9OtctZQ=
+		ZQTX4Mfe4lK6n4z6mpdyxEWGsto=
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		vpp9rvZ4z5cTo1EB7nrOdy/HxnI=
+		ohC1N3GSbPlZ60eUUmbilafOOz4=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
 		OoI4/+sHUTFECrl6PInixAUMtcY=
 		</data>
+		<key>Headers/EmbraceEventData.h</key>
+		<data>
+		o13uJY9pbatuROL/G2mqm6UsTpE=
+		</data>
 		<key>Headers/EmbraceExtension.h</key>
 		<data>
 		DGuFycLa9T+DQkUX37LkZWRuXm0=
+		</data>
+		<key>Headers/EmbraceOTelSpan.h</key>
+		<data>
+		Tx83vZkwim06kVpxbt+nDfg+i1M=
+		</data>
+		<key>Headers/EmbraceOTelSpanErrorCode.h</key>
+		<data>
+		q2ArtBfTnQiYE+RBosmMRUcQde0=
+		</data>
+		<key>Headers/EmbraceTracer.h</key>
+		<data>
+		mBLqzHlLwCYDVf31JawN4tOAZbw=
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
@@ -54,11 +66,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9/3aqNm7p8HT98n/9WN7q+zwJLA=
+		1bsGBKKdBMVdk4YhEXp71anfBgk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		6KoVZHreLF2RvTXXheT5w3aa1/M=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		VFRUlBo7R0uMBbNJscLukCKpPPs=
 		</data>
 		<key>PrivateHeaders/Embrace+ConfigModule.h</key>
 		<data>
@@ -71,22 +87,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z0Msb/Hk7tbLhsgdUAIo9gpcHbY=
+			LOf9aVCfm4HkXAHX32sOToGVxcw=
 			</data>
 			<key>hash2</key>
 			<data>
-			FYBsHyQTv1rjgBeQ2DoDBn84FOGAkYN2F/4/2kHGN0s=
+			6fMy5FOdCJUmfVpLteFfMNPzT01kt4kAUCDWtCBXzg4=
 			</data>
 		</dict>
 		<key>Headers/EMBCustomFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8GcAdfFp9CACDSSwj/AmAIKpMfk=
+			kXFt/RYTVSMKS7gPpASV9TjXJvA=
 			</data>
 			<key>hash2</key>
 			<data>
-			TRu6wLLAaiyigZl9/uvNLEFva/Xqo/adM/T/PEloE5M=
+			y6t+0J1n0qpAm2qD8Xcs6d8SJbF4AZWUFm7jP3Gl9Vo=
 			</data>
 		</dict>
 		<key>Headers/EMBFlutterEmbrace.h</key>
@@ -104,66 +120,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2pDwPHiEL8Ki2eH8Xrm9lkWavTM=
+			qTHY2GLwPB6Wreebq1Xfk2QD5Ok=
 			</data>
 			<key>hash2</key>
 			<data>
-			mhFRyk5ElgPqAnnyNg9btMtwdMNqHljyu+i5+s37hT4=
+			9BkZ5gdg6A/7s4UIYCeuoEnZ3kKC8J3KBadjgAvRNn8=
 			</data>
 		</dict>
 		<key>Headers/EMBPurchaseFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fln7youNJt3wYDCCvtvLTDqACLM=
+			niYeiLZd589FqJvtvvdf36/I5ks=
 			</data>
 			<key>hash2</key>
 			<data>
-			JtRC2sYEeN8HflAp8+Z0X5IV/sG6VaNujc2rLQZouYU=
+			XL0uHWCH+05/iYlayG9nNbqk3r/LgiDsN2dPgPz2lFw=
 			</data>
 		</dict>
 		<key>Headers/EMBRegistrationFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nfjA+gv524HXO4LhcFOlikn0ELk=
+			uNzyfDWBmu0WbJudW0agyqvhHH8=
 			</data>
 			<key>hash2</key>
 			<data>
-			4dwT9cDvKE4fGfya3+tGFVxck284aLS23K90bscCuq8=
+			3D3N0uLXgeBgivbuA9ym4FT6hYi1bzStcKIRqfh9v8g=
 			</data>
 		</dict>
 		<key>Headers/EMBSubscriptionPurchaseFlow.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BGWsbwVQXZ18wl0WqrldodVEBFw=
+			ZQTX4Mfe4lK6n4z6mpdyxEWGsto=
 			</data>
 			<key>hash2</key>
 			<data>
-			l3IcmIw0f5I6hWKozEYTqOYWAf5hnlC7Om3fqIsE9Ts=
-			</data>
-		</dict>
-		<key>Headers/EMBUploadModuleReachabilityMonitor.h</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			2/y5HcE+6TCIVvQwEiZn9OtctZQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			pPkj07EdZ4GCrB9UIT6g3x0akiqM+fYqrE/RHmpsvkM=
+			vAHs6VlAbXyvazhBLBys1u0ich+Eu2LTCveq8Ks3j5E=
 			</data>
 		</dict>
 		<key>Headers/Embrace.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vpp9rvZ4z5cTo1EB7nrOdy/HxnI=
+			ohC1N3GSbPlZ60eUUmbilafOOz4=
 			</data>
 			<key>hash2</key>
 			<data>
-			E5+M0JJncCL6FDRlq3IThxZgClHTTM2r/eaDHeIgcvo=
+			VruIIN6YidbJ+xaOwMsk8kUuXehh14mVoJRkGqcJIt0=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
@@ -177,6 +182,17 @@
 			abVi+iBmgkQ3f6LqjR/dfF3zYmTQD5trYBAhKqUGyMI=
 			</data>
 		</dict>
+		<key>Headers/EmbraceEventData.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o13uJY9pbatuROL/G2mqm6UsTpE=
+			</data>
+			<key>hash2</key>
+			<data>
+			7OVSJMvgKRPBi6Lg1YWqDUjZIcViAlufmLEgqry2t/4=
+			</data>
+		</dict>
 		<key>Headers/EmbraceExtension.h</key>
 		<dict>
 			<key>hash</key>
@@ -186,6 +202,39 @@
 			<key>hash2</key>
 			<data>
 			aLpzJFBwqKDWmg460CScmCKWgit8/k1p5CjjaBnnT28=
+			</data>
+		</dict>
+		<key>Headers/EmbraceOTelSpan.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Tx83vZkwim06kVpxbt+nDfg+i1M=
+			</data>
+			<key>hash2</key>
+			<data>
+			8yGExyfdx54QBwohRpKFBu/WJlL+JuZsyusAh0Nmeuk=
+			</data>
+		</dict>
+		<key>Headers/EmbraceOTelSpanErrorCode.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			q2ArtBfTnQiYE+RBosmMRUcQde0=
+			</data>
+			<key>hash2</key>
+			<data>
+			IlNMsW5aitWcUVzsagl+DFglNurVBM0vWW3OPStqjLQ=
+			</data>
+		</dict>
+		<key>Headers/EmbraceTracer.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mBLqzHlLwCYDVf31JawN4tOAZbw=
+			</data>
+			<key>hash2</key>
+			<data>
+			Tbda58uojaqdINKXzgECw+yHZeXmbzLtvNhuEIr6faU=
 			</data>
 		</dict>
 		<key>Headers/RNEmbrace.h</key>
@@ -208,6 +257,17 @@
 			<key>hash2</key>
 			<data>
 			f0xJOYf2ktuc3jrV6KFBMnpTsMF2PKrPNURDRsncxdw=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VFRUlBo7R0uMBbNJscLukCKpPPs=
+			</data>
+			<key>hash2</key>
+			<data>
+			Um/gOt3/6ipTIFJCDOpDlBcc+H8/PEPcDN9EZ0hZQmg=
 			</data>
 		</dict>
 		<key>PrivateHeaders/Embrace+ConfigModule.h</key>

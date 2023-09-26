@@ -14,6 +14,7 @@
  
  This class is thread-safe.
  */
+__attribute__((deprecated("This class is deprecated. Please contact Embrace if you have a use case for this API and wish to see an alternative.")))
 @interface EMBRegistrationFlow : EMBCustomFlow
 
 /**
