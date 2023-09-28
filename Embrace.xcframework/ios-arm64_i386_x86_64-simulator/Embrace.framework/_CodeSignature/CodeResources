@@ -34,11 +34,11 @@
 		</data>
 		<key>Headers/Embrace.h</key>
 		<data>
-		ohC1N3GSbPlZ60eUUmbilafOOz4=
+		w+IHUxlmn1xGGsSJeL1uYcXpUJc=
 		</data>
 		<key>Headers/EmbraceConfig.h</key>
 		<data>
-		OoI4/+sHUTFECrl6PInixAUMtcY=
+		9EXnh3MzRnbBH4Un5fCcHC5xf7M=
 		</data>
 		<key>Headers/EmbraceEventData.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1bsGBKKdBMVdk4YhEXp71anfBgk=
+		rQtxiCnE7Ce6P090YHlmwPC4TJI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -164,22 +164,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ohC1N3GSbPlZ60eUUmbilafOOz4=
+			w+IHUxlmn1xGGsSJeL1uYcXpUJc=
 			</data>
 			<key>hash2</key>
 			<data>
-			VruIIN6YidbJ+xaOwMsk8kUuXehh14mVoJRkGqcJIt0=
+			cTd0VZBOWjz9oqCxcG/0A82CpOG6w27D3J/3At9UyDY=
 			</data>
 		</dict>
 		<key>Headers/EmbraceConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			OoI4/+sHUTFECrl6PInixAUMtcY=
+			9EXnh3MzRnbBH4Un5fCcHC5xf7M=
 			</data>
 			<key>hash2</key>
 			<data>
-			abVi+iBmgkQ3f6LqjR/dfF3zYmTQD5trYBAhKqUGyMI=
+			H9PtOxj+tWo+bnmAYrXxVOhQ5GKJQYzRRcWpnKVMRGM=
 			</data>
 		</dict>
 		<key>Headers/EmbraceEventData.h</key>

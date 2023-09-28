@@ -216,7 +216,7 @@
 /**
  Control whether network request metrics is captured.
  
- @note Plist detail
+ @note This configuration has been deprecated as the SDK no longer captures these highly detailed network metrics
     - Key: COLLECT_NETWORK_REQUEST_METRICS
     - Type: Boolean
     - Default: true
