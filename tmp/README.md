@@ -7,7 +7,7 @@
 
 Welcome to the iOS SDK! Embrace helps you monitor the performance and stability of your mobile apps and keep your users happy. We provide unmatched visibility into the experiences your users are having, and give you the information and insights you need to maximize the performance of your app.
 
-To get started, head over to https://docs.embrace.io
+To get started, head over to https://embrace.io/docs/
 
 Contact us on [Slack](https://embrace-io-community.slack.com/) or at [support@embrace.io](mailto:support@embrace.io)
 
