@@ -216,6 +216,11 @@ function upload() {
     fi
     cd "$BUILD_ROOT" || { log_error "Could not cd to BUILD_ROOT ${BUILD_ROOT}. Exiting." ; return ; }
 
+    unity_args=""
+    if [ -f "$PROJECT_DIR/Classes/Native/Symbols/LineNumberMappings.json" ] && [ -f "$PROJECT_DIR/Classes/Native/Symbols/MethodMap.tsv" ] ; then
+	unity_args="--cs-line-map $PROJECT_DIR/Classes/Native/Symbols/LineNumberMappings.json --cs-method-map $PROJECT_DIR/Classes/Native/Symbols/MethodMap.tsv"
+    fi
+
     # if we can't find the files we are looking for with globs, we want nulls
     shopt -s nullglob
 
@@ -253,7 +258,7 @@ function upload() {
         else
           icon_arg=""
         fi
-        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $icon_arg $app_version_arg $host_arg --dsym \"$app_dsym_file\" --log-level $EMBRACE_LOG_LEVEL"
+        run "\"$UPLOAD_BIN_PATH\" --app $EMBRACE_ID --token $EMBRACE_TOKEN $unity_args $icon_arg $app_version_arg $host_arg --dsym \"$app_dsym_file\" --log-level $EMBRACE_LOG_LEVEL"
     else
         log_warning "No app dSYM file was found under BUILD_ROOT ${BUILD_ROOT}. Skipping upload."
     fi

@@ -808,7 +808,7 @@ or notes that significant events (add item to cart, start conversation, receive 
  Logs enhanced metrics for a given URLSessionTask
  */
 - (void)logURLSessionTaskMetrics:(nullable NSURLSessionTaskMetrics *)metrics
-               forURLSessionTask:(nullable NSURLSessionTask *)task DEPRECATED_MSG_ATTRIBUTE("NSURLSessionTaskMetrics interactions are now recorded automatically by the SDK. This method will be removed in future versions.") API_AVAILABLE(ios(10.0));
+               forURLSessionTask:(nullable NSURLSessionTask *)task DEPRECATED_MSG_ATTRIBUTE("NSURLSessionTaskMetrics interactions are no longer recorded by the SDK. This method will be removed in future versions.") API_AVAILABLE(ios(10.0));
 
 /**
  DEPRECATED
