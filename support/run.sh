@@ -218,7 +218,7 @@ function upload() {
 
     unity_args=""
     if [ -f "$PROJECT_DIR/Classes/Native/Symbols/LineNumberMappings.json" ] && [ -f "$PROJECT_DIR/Classes/Native/Symbols/MethodMap.tsv" ] ; then
-	unity_args="--cs-line-map $PROJECT_DIR/Classes/Native/Symbols/LineNumberMappings.json --cs-method-map $PROJECT_DIR/Classes/Native/Symbols/MethodMap.tsv"
+	unity_args="--cs-line-map \"$PROJECT_DIR/Classes/Native/Symbols/LineNumberMappings.json\" --cs-method-map \"$PROJECT_DIR/Classes/Native/Symbols/MethodMap.tsv\""
     fi
 
     # if we can't find the files we are looking for with globs, we want nulls
