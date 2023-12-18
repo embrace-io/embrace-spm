@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64_armv7/Embrace.framework/Embrace</key>
 		<data>
-		d2iL9IO+G5JtJHaSgWCvFrgvoUw=
+		V61HNM2X5k6lQsDaEQiTQAEosPQ=
 		</data>
 		<key>ios-arm64_armv7/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>ios-arm64_armv7/Embrace.framework/Info.plist</key>
 		<data>
-		kqvm5BWUUCn7wrWXdb9iFSeNpBw=
+		Z/KclSmsS/+uWVyTWaqstGcBPV0=
 		</data>
 		<key>ios-arm64_armv7/Embrace.framework/Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Embrace</key>
 		<data>
-		H0iSZzDTouAY9/nmRk5j3K/yKTE=
+		Qknplnh8r16Alnv9msZVM+6dZYk=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Info.plist</key>
 		<data>
-		PfdAGHkyFQAAlj2GTyaPiu8TPf4=
+		uT+MRGaxVpcEv8Laqh4Uoc4f85c=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Modules/module.modulemap</key>
 		<data>
@@ -166,11 +166,11 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/_CodeSignature/CodeResources</key>
 		<data>
-		uXx7S0qPUIpYtxy6bCK+dg+Hp/U=
+		lyAPo4R5udBKKbvJruqU+53gk1w=
 		</data>
 		<key>tvos-arm64/Embrace.framework/Embrace</key>
 		<data>
-		1ezjZi7XSog7CqoaeC9MfP+NvcU=
+		ie5p5mxPnH9OK73bqLHQ5mHkpEs=
 		</data>
 		<key>tvos-arm64/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -234,7 +234,7 @@
 		</data>
 		<key>tvos-arm64/Embrace.framework/Info.plist</key>
 		<data>
-		E0d4a+jkyaCqJRKncAueYwoNlfM=
+		T1/XU8PskbODcfG4mwdvMV3vVxY=
 		</data>
 		<key>tvos-arm64/Embrace.framework/Modules/module.modulemap</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Embrace</key>
 		<data>
-		0KRkxQZwyhzbWspho7pZhYIbKUI=
+		kVtzDHy0HGR9jVCfuufjxoc+yNw=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -314,7 +314,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Info.plist</key>
 		<data>
-		RiG+22Y3zUbjnrLHsQPGEQo+Yec=
+		g38bFCQO80ew8FAlC9QKRUqEzdU=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Modules/module.modulemap</key>
 		<data>
@@ -330,7 +330,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/_CodeSignature/CodeResources</key>
 		<data>
-		m8brFjybAOYFlScynA7Gl0suxUE=
+		rHC4G4FVwWDyYbjM/+mZNHCWdFY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -339,11 +339,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d2iL9IO+G5JtJHaSgWCvFrgvoUw=
+			V61HNM2X5k6lQsDaEQiTQAEosPQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			V5/Aj/hiPbx/dTdWr17rDDFi1Kb88ZAl+4ewy+6BV6I=
+			tuYLOlRN4sZsns9MX/wsPuM/viWjVnQI5MmpD646kK0=
 			</data>
 		</dict>
 		<key>ios-arm64_armv7/Embrace.framework/Headers/EMBConstants.h</key>
@@ -515,11 +515,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			kqvm5BWUUCn7wrWXdb9iFSeNpBw=
+			Z/KclSmsS/+uWVyTWaqstGcBPV0=
 			</data>
 			<key>hash2</key>
 			<data>
-			QZPQI14WanybHRsgZNtE7+3ub8P4AW80CZf93j9pVjk=
+			nZcddOcbglRtauIVT1BP55gyOhJIQYllgJFr0NwK45w=
 			</data>
 		</dict>
 		<key>ios-arm64_armv7/Embrace.framework/Modules/module.modulemap</key>
@@ -559,11 +559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			H0iSZzDTouAY9/nmRk5j3K/yKTE=
+			Qknplnh8r16Alnv9msZVM+6dZYk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Lm4DmLzKvLSlKJZRnX4NI30xTFBxPDLSrXhcel9mHzc=
+			FxZdAp+XHzOUMGzZ10GITcJW4qkUL1nL4gclqz7bMcA=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
@@ -735,11 +735,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PfdAGHkyFQAAlj2GTyaPiu8TPf4=
+			uT+MRGaxVpcEv8Laqh4Uoc4f85c=
 			</data>
 			<key>hash2</key>
 			<data>
-			wwGVjmQR6/fPwrnI1ObmwkA1V8BkUkfVcrVOWMH/jjE=
+			9qAAgAAx+fr52Jcrz/PHV6cubNH+pkEQlU++3aZscck=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Modules/module.modulemap</key>
@@ -779,22 +779,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uXx7S0qPUIpYtxy6bCK+dg+Hp/U=
+			lyAPo4R5udBKKbvJruqU+53gk1w=
 			</data>
 			<key>hash2</key>
 			<data>
-			wptZt6SVKqvlmchNQ7vU9f6uCFW9JZ+n3m026dWPx40=
+			Sq+IIOy94buig/ksFzFijrsx6h5TlDia6Af6TWOe2fM=
 			</data>
 		</dict>
 		<key>tvos-arm64/Embrace.framework/Embrace</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1ezjZi7XSog7CqoaeC9MfP+NvcU=
+			ie5p5mxPnH9OK73bqLHQ5mHkpEs=
 			</data>
 			<key>hash2</key>
 			<data>
-			DgzO6G829fQ64qwqEuKZHHBYpZoV/C6VxHEPr1eiTrs=
+			f4BYnFV3Ffy6i2Xs/w3j1Qqtz8x070GOJGHXZzkY4Gs=
 			</data>
 		</dict>
 		<key>tvos-arm64/Embrace.framework/Headers/EMBConstants.h</key>
@@ -966,11 +966,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E0d4a+jkyaCqJRKncAueYwoNlfM=
+			T1/XU8PskbODcfG4mwdvMV3vVxY=
 			</data>
 			<key>hash2</key>
 			<data>
-			k2ZQIpDkLmEhACYS03gTTwm3X+jDBs/9B1LumYv8mI0=
+			JBiQj15x+msEfoWwEJRB5XYeOwKxm6Ww53t8gYWTezM=
 			</data>
 		</dict>
 		<key>tvos-arm64/Embrace.framework/Modules/module.modulemap</key>
@@ -1010,11 +1010,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0KRkxQZwyhzbWspho7pZhYIbKUI=
+			kVtzDHy0HGR9jVCfuufjxoc+yNw=
 			</data>
 			<key>hash2</key>
 			<data>
-			cPn/JLVzStmd2qSDH7sOi7FiIcv/mu5HIB3aFRul1Do=
+			JrUNW23km4rlLeXiH0ae9TrjEF6KBmS4ghW9G/nqk+g=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
@@ -1186,11 +1186,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			RiG+22Y3zUbjnrLHsQPGEQo+Yec=
+			g38bFCQO80ew8FAlC9QKRUqEzdU=
 			</data>
 			<key>hash2</key>
 			<data>
-			yk6J6aqvDYVZNn4fIi2ph57ymTYzDpSWn9C2x8idJQs=
+			wcZnGqqo9+QuAkK4Qbhjdc8+Z1gsDrSt1Rv4OBPtwMY=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Modules/module.modulemap</key>
@@ -1230,11 +1230,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m8brFjybAOYFlScynA7Gl0suxUE=
+			rHC4G4FVwWDyYbjM/+mZNHCWdFY=
 			</data>
 			<key>hash2</key>
 			<data>
-			9SwXpSSIbH13g30jLe3e5jjrIhTjfvYTXXcEuaElbJo=
+			hxtFp1NaH1YOTEv64lh/nU3+8e8n+O6Zv4D793G3vt0=
 			</data>
 		</dict>
 	</dict>
