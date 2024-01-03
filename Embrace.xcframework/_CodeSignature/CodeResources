@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64_armv7/Embrace.framework/Embrace</key>
 		<data>
-		3KTYtOD9/tZzRguWCmsLppcqIEM=
+		B7e/pgCXFcsoF3ZI+HIoHIi4nzI=
 		</data>
 		<key>ios-arm64_armv7/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Embrace</key>
 		<data>
-		BLXP1/47edQ2giDearrDWm6W4Fs=
+		xB9t0MMTNQSrXlAaIqfpx9ogO4s=
 		</data>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>tvos-arm64/Embrace.framework/Embrace</key>
 		<data>
-		nB+1rkgirXWHC4pvyYKGnqrwlSA=
+		YbVLwDPSXgBVklnatwBzexKKdJg=
 		</data>
 		<key>tvos-arm64/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Embrace</key>
 		<data>
-		i+Wl19RBJI8zB/ZrVaNb1I84wIU=
+		KIVYsW5FdtGKSBCqhH15kHS/2kE=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
 		<data>
@@ -339,11 +339,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			3KTYtOD9/tZzRguWCmsLppcqIEM=
+			B7e/pgCXFcsoF3ZI+HIoHIi4nzI=
 			</data>
 			<key>hash2</key>
 			<data>
-			/GtTVEN1JbNuyOz1DP2gVx0aS7T5eF/fNFWHcy3h0iA=
+			vczbt3+JynXY6Jk6bZwYPhOO9qp9YJD04JKpvJmyvNk=
 			</data>
 		</dict>
 		<key>ios-arm64_armv7/Embrace.framework/Headers/EMBConstants.h</key>
@@ -559,11 +559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BLXP1/47edQ2giDearrDWm6W4Fs=
+			xB9t0MMTNQSrXlAaIqfpx9ogO4s=
 			</data>
 			<key>hash2</key>
 			<data>
-			xhx6Uwc1b/x243b/R/PCsN/WAaVl3ukd/UiUwIR/rko=
+			49mmY36MUDvTpD/BNFusRguJXGegm3aTNky3LSU+FJs=
 			</data>
 		</dict>
 		<key>ios-arm64_i386_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
@@ -790,11 +790,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nB+1rkgirXWHC4pvyYKGnqrwlSA=
+			YbVLwDPSXgBVklnatwBzexKKdJg=
 			</data>
 			<key>hash2</key>
 			<data>
-			GlAfK4ZEugC0jv8qO+TvBTTV8rYxDE4VI2PGtz11thg=
+			s7MDJvqRAXz2aV7DJ9qV6ma8953SlILNyoD4nW9r4RA=
 			</data>
 		</dict>
 		<key>tvos-arm64/Embrace.framework/Headers/EMBConstants.h</key>
@@ -1010,11 +1010,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i+Wl19RBJI8zB/ZrVaNb1I84wIU=
+			KIVYsW5FdtGKSBCqhH15kHS/2kE=
 			</data>
 			<key>hash2</key>
 			<data>
-			sRnQMznhMOUTYRvjXsTTgrCx2evRVNrqycfQri2NOTQ=
+			roDK8Hfs01yj88QNNcYa0Tc5Yxn331Df4GGF1mo73Hk=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/Embrace.framework/Headers/EMBConstants.h</key>
