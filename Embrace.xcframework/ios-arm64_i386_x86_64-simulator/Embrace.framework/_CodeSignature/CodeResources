@@ -46,7 +46,7 @@
 		</data>
 		<key>Headers/EmbraceExtension.h</key>
 		<data>
-		DGuFycLa9T+DQkUX37LkZWRuXm0=
+		SOw3Ag2sM5bPNxGLUC6moLt0TsE=
 		</data>
 		<key>Headers/EmbraceOTelSpan.h</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		4XJ3U3z9Q02RUtNCNF63eKDFpRc=
+		zGQhRjgta7otJVa+ufvrntmpI+U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -197,11 +197,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DGuFycLa9T+DQkUX37LkZWRuXm0=
+			SOw3Ag2sM5bPNxGLUC6moLt0TsE=
 			</data>
 			<key>hash2</key>
 			<data>
-			aLpzJFBwqKDWmg460CScmCKWgit8/k1p5CjjaBnnT28=
+			90A55c8/Mj3OcaXWdMpp4Z8GcEgCmX+379fAhdjArco=
 			</data>
 		</dict>
 		<key>Headers/EmbraceOTelSpan.h</key>
