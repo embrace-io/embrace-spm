@@ -144,9 +144,19 @@
 - (nullable NSString *) startSpanWithName:(nonnull NSString *)name parentSpanId:(nullable NSString *)parentSpanId;
 
 /**
+ * Create and start a new span at a specific moment in time. Returns the spanId of the new span if both operations are successful, and null if either fails.
+ */
+- (nullable NSString *)startSpanWithName:(nonnull NSString *)name parentSpanId:(nullable NSString *)parentSpanId startTimeNanos:(NSInteger)startTimeNanos;
+
+/**
 * Stop an active span. Returns true if the span is stopped after the method returns and false otherwise.
 */
 - (BOOL) stopSpanWithId:(nonnull NSString *)spanId errorCode:(EmbraceOTelSpanErrorCode)errorCode;
+
+/**
+* Stop an active span at a specific moment in time. Returns true if the span is stopped after the method returns and false otherwise.
+*/
+- (BOOL) stopSpanWithId:(nonnull NSString *)spanId endTimeNanos:(NSInteger)endTimeNanos errorCode:(EmbraceOTelSpanErrorCode)errorCode;
 
 /**
 * Create and add a Span Event with the given parameters to an active span with the given [spanId]. Returns false if the event
