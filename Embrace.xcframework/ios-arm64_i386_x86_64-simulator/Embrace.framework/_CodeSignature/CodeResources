@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/EmbraceOTelSpan.h</key>
 		<data>
-		Tx83vZkwim06kVpxbt+nDfg+i1M=
+		EOWsJkF6UoZCOr6252bhaFhK2vI=
 		</data>
 		<key>Headers/EmbraceOTelSpanErrorCode.h</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>Headers/RNEmbrace.h</key>
 		<data>
-		I4FDHvqiNZ7TVE92ESeoB6my8fE=
+		uMxn7xEL9o1F6CT8SS1NDvBmIMQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PCm3uVcNUnNdDHKtB1vzR+lC3j0=
+		8677rwmdKK/h832MUiLy0ge5g14=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -208,11 +208,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tx83vZkwim06kVpxbt+nDfg+i1M=
+			EOWsJkF6UoZCOr6252bhaFhK2vI=
 			</data>
 			<key>hash2</key>
 			<data>
-			8yGExyfdx54QBwohRpKFBu/WJlL+JuZsyusAh0Nmeuk=
+			MXbqtBvQyhpo7BlCk/3vUKZupdKb/xy8ZiPrySoUr5s=
 			</data>
 		</dict>
 		<key>Headers/EmbraceOTelSpanErrorCode.h</key>
@@ -241,11 +241,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I4FDHvqiNZ7TVE92ESeoB6my8fE=
+			uMxn7xEL9o1F6CT8SS1NDvBmIMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			AA4HhCwC/N+FeH8izjQDooBmRxeZI475sDu/1UWWoco=
+			xq/duI+SNtzJcTFcOv/NIEELX4yxbj779SrW/KhDrUU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
