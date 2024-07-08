@@ -1,4 +1,4 @@
-![embrace](https://s3.amazonaws.com/embrace-downloads-prod/embrace.png)
+![embrace](https://downloads.embrace.io/embrace.png)
 
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/EmbraceIO.svg)](https://img.shields.io/cocoapods/v/EmbraceIO.svg)
 [![Platform](https://img.shields.io/cocoapods/p/EmbraceIO.svg?style=flat)](https://cocoadocs.org/docsets/EmbraceIO)
@@ -9,7 +9,7 @@ Welcome to the iOS SDK! Embrace helps you monitor the performance and stability 
 
 To get started, head over to https://embrace.io/docs/
 
-Contact us on [Slack](https://embrace-io-community.slack.com/) or at [support@embrace.io](mailto:support@embrace.io)
+Contact us on [Slack](https://community.embrace.io/) or at [support@embrace.io](mailto:support@embrace.io)
 
 ## Logging guidelines
 
