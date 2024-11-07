@@ -56,7 +56,15 @@
 
 DEFAULT_FRAMEWORK_SEARCH_DEPTH=2
 
-UPLOAD_BIN=upload
+UPLOAD_BIN=embrace_symbol_upload.$(uname | tr A-Z a-z)
+if [ $(uname) == "Linux" ]; then
+  if [ $(uname -m) == "aarch64" ]; then
+    UPLOAD_BIN=${UPLOAD_BIN}-arm64
+  else
+    UPLOAD_BIN=${UPLOAD_BIN}-amd64
+  fi
+fi
+
 UPLOAD_RELATIVE_PATH=EmbraceIO/${UPLOAD_BIN}
 
 # Allow override of the store host, default to empty to use default store
